@@ -1,0 +1,2445 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/1/2021 6:45:05 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="AMOAEUCLI"
+  DTS:CreatorName="AMOAEUCLI\melis"
+  DTS:DTSID="{FC948BF4-BF04-435C-8FD0-1CDB5508B2A1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.152"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{C363E119-7428-4E71-B672-6E51FF70B275}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5992F318-D66D-4843-908A-ED3417101453}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\melis\OneDrive\Documents\EAE\Data Management\Practica Final\Fichero1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{49A4C3BD-DB3F-4D7E-83B5-357D929E52F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="create_date"
+              DTS:DTSID="{A01485BF-D6DB-4CAC-AF9A-3331DF2256D2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{64ADFB20-FFAA-4BFF-8078-E466948860AB}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\melis\OneDrive\Documents\EAE\Data Management\Practica Final\Fichero2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="title"
+              DTS:DTSID="{B088404E-6ED3-41A1-B972-C17273FDB4E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="initial_description"
+              DTS:DTSID="{4194A9A9-C9B8-462C-BC54-3017412D03D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="length"
+              DTS:DTSID="{9FE56563-0346-4D3E-AA58-C1D6DD881312}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Duration_type"
+              DTS:DTSID="{916F816C-81E2-438E-AB15-E917147D75EA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9BF21D7A-EFF8-4B44-8D40-2A161B8CB7A8}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\melis\OneDrive\Documents\EAE\Data Management\Practica Final\Fichero3.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="45"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{CC6EDB66-1D18-46B0-98D0-80784CF18C5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="45"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{7C496ECB-98CE-42F9-8BE0-FC193AAD9316}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1E4ACC86-4FC3-47B9-A347-C094BE63102E}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\melis\OneDrive\Documents\EAE\Data Management\Practica Final\Fichero4.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_id"
+              DTS:DTSID="{C8F424A7-4C3E-4BB7-8F0C-A7DED3DD255B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="45"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{20414CA7-272F-4418-9313-5B1251D76E3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="45"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{0BAB009E-329C-4C03-AEBB-879A70DE53F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{B9120896-776A-4023-B662-0831CC119B0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{6420A833-7482-4514-B9C6-A7EBB202B9C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{BC7DFC37-F3E5-4901-A428-2C8E2B36724D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SAKILA.root]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{82BC7864-84A3-4A48-90D9-80B69EDD447F}"
+      DTS:ObjectName="SAKILA.root">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=root;Dsn=SAKILA;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAp55cUMkfQ0ypCf9HjWn6mAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/DOXsM2YwIpWLmh5vmYnKHg8iBCQmE+zK2HnuEInMnQAAAAAOgAAAAAIAACAAAADVn/ve4+TA+GcIlK+bzlXt9EvzIxcc64avP+JQbN2dYyAAAAC4V68UbzZa7imQCgaLGv3GJba9+lAwX3/Tznz7Vr6lG0AAAADbSsOCZ0OqpvwdiyNxT+yIrKYr83LDxXiwyJLuA7CuyksizhmSjdZjHrwkRuN+uZ0dCNmP3eDe3UBMfXvxucqe</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga de Fichero 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DDD7DC29-A7CA-455F-A131-57C0253AC03D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga de Fichero 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga de Fichero 1\Fichero 1"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Fichero 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga de Fichero 1\Fichero 1.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga de Fichero 1\Fichero 1.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga de Fichero 1\Fichero 1.Inputs[Flat File Destination Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Carga de Fichero 1\Fichero 1.Inputs[Flat File Destination Input].ExternalColumns[email]"
+                      lineageId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 1\Fichero 1.Inputs[Flat File Destination Input].Columns[Create_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Create_date"
+                      externalMetadataColumnId="Package\Carga de Fichero 1\Fichero 1.Inputs[Flat File Destination Input].ExternalColumns[create_date]"
+                      lineageId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].Columns[Create_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 1\Fichero 1.Inputs[Flat File Destination Input].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="50"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 1\Fichero 1.Inputs[Flat File Destination Input].ExternalColumns[create_date]"
+                      dataType="dbTimeStamp"
+                      name="create_date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Carga de Fichero 1\ODBC Source"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">fichero1</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga de Fichero 1\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SAKILA.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[SAKILA.root]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].Columns[Email]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Email]"
+                      length="50"
+                      lineageId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].Columns[Email]"
+                      name="Email" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].Columns[Create_date]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Create_date]"
+                      lineageId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].Columns[Create_date]"
+                      name="Create_date" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="50"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Create_date]"
+                      dataType="dbTimeStamp"
+                      name="Create_date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output].Columns[Email]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Email]"
+                      length="50"
+                      lineageId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output].Columns[Email]"
+                      name="Email" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output].Columns[Create_date]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Create_date]"
+                      lineageId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output].Columns[Create_date]"
+                      name="Create_date" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga de Fichero 1.Paths[ODBC Source Output]"
+              endId="Package\Carga de Fichero 1\Fichero 1.Inputs[Flat File Destination Input]"
+              name="ODBC Source Output"
+              startId="Package\Carga de Fichero 1\ODBC Source.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Carga de Fichero 2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8AA3B69E-C5E5-46AC-BF63-CB25ACCCCCDB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga de Fichero 2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga de Fichero 2\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga de Fichero 2\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].Columns[title]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="title"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[title]"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[title]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].Columns[initial_description]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="initial_description"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[initial_description]"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[initial_description]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].Columns[length]"
+                      cachedDataType="ui2"
+                      cachedName="length"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[length]"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[length]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].Columns[Duration_type]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Duration_type"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Duration_type]"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[Duration_type]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[title]"
+                      dataType="wstr"
+                      length="128"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[initial_description]"
+                      dataType="wstr"
+                      length="20"
+                      name="initial_description" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[length]"
+                      dataType="ui2"
+                      name="length" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Duration_type]"
+                      dataType="wstr"
+                      length="15"
+                      name="Duration_type" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Carga de Fichero 2\ODBC Source"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">fichero2</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga de Fichero 2\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SAKILA.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[SAKILA.root]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[title]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[title]"
+                      length="128"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[title]"
+                      name="title" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[initial_description]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[initial_description]"
+                      length="20"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[initial_description]"
+                      name="initial_description" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[length]"
+                      dataType="ui2"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[length]"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[length]"
+                      name="length" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[Duration_type]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Duration_type]"
+                      length="15"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].Columns[Duration_type]"
+                      name="Duration_type" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[title]"
+                      dataType="wstr"
+                      length="128"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[initial_description]"
+                      dataType="wstr"
+                      length="20"
+                      name="initial_description" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[length]"
+                      dataType="ui2"
+                      name="length" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Duration_type]"
+                      dataType="wstr"
+                      length="15"
+                      name="Duration_type" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[title]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[title]"
+                      length="128"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[title]"
+                      name="title" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[initial_description]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[initial_description]"
+                      length="20"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[initial_description]"
+                      name="initial_description" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[length]"
+                      dataType="ui2"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[length]"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[length]"
+                      name="length" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[Duration_type]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Duration_type]"
+                      length="15"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[Duration_type]"
+                      name="Duration_type" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga de Fichero 2.Paths[ODBC Source Output]"
+              endId="Package\Carga de Fichero 2\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="ODBC Source Output"
+              startId="Package\Carga de Fichero 2\ODBC Source.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Carga de Fichero 3"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AE09DC6F-E529-4344-8CA9-1B414058AF8E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga de Fichero 3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga de Fichero 3\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga de Fichero 3\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga de Fichero 3\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga de Fichero 3\Flat File Destination.Inputs[Flat File Destination Input].Columns[first_name]"
+                      cachedDataType="wstr"
+                      cachedLength="45"
+                      cachedName="first_name"
+                      externalMetadataColumnId="Package\Carga de Fichero 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[first_name]"
+                      lineageId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].Columns[first_name]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 3\Flat File Destination.Inputs[Flat File Destination Input].Columns[last_name]"
+                      cachedDataType="wstr"
+                      cachedLength="45"
+                      cachedName="last_name"
+                      externalMetadataColumnId="Package\Carga de Fichero 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[last_name]"
+                      lineageId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].Columns[last_name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[first_name]"
+                      dataType="wstr"
+                      length="45"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[last_name]"
+                      dataType="wstr"
+                      length="45"
+                      name="last_name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Carga de Fichero 3\ODBC Source"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">fichero3</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga de Fichero 3\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SAKILA.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[SAKILA.root]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].Columns[first_name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[first_name]"
+                      length="45"
+                      lineageId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].Columns[first_name]"
+                      name="first_name" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].Columns[last_name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_name]"
+                      length="45"
+                      lineageId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].Columns[last_name]"
+                      name="last_name" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[first_name]"
+                      dataType="wstr"
+                      length="45"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_name]"
+                      dataType="wstr"
+                      length="45"
+                      name="last_name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output].Columns[first_name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[first_name]"
+                      length="45"
+                      lineageId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output].Columns[first_name]"
+                      name="first_name" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output].Columns[last_name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_name]"
+                      length="45"
+                      lineageId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output].Columns[last_name]"
+                      name="last_name" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga de Fichero 3.Paths[ODBC Source Output]"
+              endId="Package\Carga de Fichero 3\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="ODBC Source Output"
+              startId="Package\Carga de Fichero 3\ODBC Source.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Carga de Fichero 4"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0546ECC4-4022-4D6C-8782-4D3028E7FE3F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga de Fichero 4"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga de Fichero 4\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga de Fichero 4\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].Columns[customer_id]"
+                      cachedDataType="ui2"
+                      cachedName="customer_id"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[customer_id]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].Columns[first_name]"
+                      cachedDataType="wstr"
+                      cachedLength="45"
+                      cachedName="first_name"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[first_name]"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[first_name]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].Columns[last_name]"
+                      cachedDataType="wstr"
+                      cachedLength="45"
+                      cachedName="last_name"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[last_name]"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[last_name]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].Columns[address]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="address"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[address]"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[address]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[country]"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[country]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[customer_id]"
+                      dataType="ui2"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[first_name]"
+                      dataType="wstr"
+                      length="45"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[last_name]"
+                      dataType="wstr"
+                      length="45"
+                      name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[address]"
+                      dataType="wstr"
+                      length="50"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[country]"
+                      dataType="wstr"
+                      length="50"
+                      name="country" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Carga de Fichero 4\ODBC Source"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">fichero4</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga de Fichero 4\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SAKILA.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[SAKILA.root]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[customer_id]"
+                      dataType="ui2"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[customer_id]"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[customer_id]"
+                      name="customer_id" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[first_name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[first_name]"
+                      length="45"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[first_name]"
+                      name="first_name" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[last_name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_name]"
+                      length="45"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[last_name]"
+                      name="last_name" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[address]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[address]"
+                      length="50"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[address]"
+                      name="address" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[city]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[country]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[country]"
+                      length="50"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].Columns[country]"
+                      name="country" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[customer_id]"
+                      dataType="ui2"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[first_name]"
+                      dataType="wstr"
+                      length="45"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_name]"
+                      dataType="wstr"
+                      length="45"
+                      name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[address]"
+                      dataType="wstr"
+                      length="50"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[country]"
+                      dataType="wstr"
+                      length="50"
+                      name="country" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[customer_id]"
+                      dataType="ui2"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[customer_id]"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[customer_id]"
+                      name="customer_id" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[first_name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[first_name]"
+                      length="45"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[first_name]"
+                      name="first_name" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[last_name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_name]"
+                      length="45"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[last_name]"
+                      name="last_name" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[address]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[address]"
+                      length="50"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[address]"
+                      name="address" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[city]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[country]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[country]"
+                      length="50"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[country]"
+                      name="country" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga de Fichero 4.Paths[ODBC Source Output]"
+              endId="Package\Carga de Fichero 4\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="ODBC Source Output"
+              startId="Package\Carga de Fichero 4\ODBC Source.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Script Task"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Script Task"
+      DTS:DTSID="{FA9E525B-3109-4533-B01A-EFB1336EB076}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Script Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_31168428b0e24d758c1f9b627eb8dbfa"
+          VSTAMajorVersion="15"
+          VSTAMinorVersion="0"
+          Language="CSharp">
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_31168428b0e24d758c1f9b627eb8dbfa")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_31168428b0e24d758c1f9b627eb8dbfa")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.resx"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+          <ProjectItem
+            Name="ScriptMain.cs"
+            Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net;
+#endregion
+
+namespace ST_31168428b0e24d758c1f9b627eb8dbfa
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+	{
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+		/// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+		public void Main()
+		{
+            // TODO: Add your code here
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("melissadcabral@gmail.com");
+                mail.To.Add("melissa142@live.com");
+                mail.Subject = "Practica Final Data Management";
+                mail.Body = "<h1>Hola, Ver adjuntos los ficheros Txt segun lo solicitado en la Practica Final de Data Management</h1>";
+                mail.IsBodyHtml = true;
+                mail.Attachments.Add(new Attachment(@"C:\Users\melis\OneDrive\Documents\EAE\Data Management\Practica Final\fichero1.txt"));
+                mail.Attachments.Add(new Attachment(@"C:\Users\melis\OneDrive\Documents\EAE\Data Management\Practica Final\fichero2.txt"));
+                mail.Attachments.Add(new Attachment(@"C:\Users\melis\OneDrive\Documents\EAE\Data Management\Practica Final\fichero3.txt"));
+                mail.Attachments.Add(new Attachment(@"C:\Users\melis\OneDrive\Documents\EAE\Data Management\Practica Final\fichero4.txt"));
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.UseDefaultCredentials = false;
+                    smtp.Credentials = new NetworkCredential("melissadcabral@gmail.com", "eae2021data");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
+            }
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+		}
+
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+	}
+}]]></ProjectItem>
+          <ProjectItem
+            Name="ST_31168428b0e24d758c1f9b627eb8dbfa.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{426f24f8-5387-46e5-9f67-7129356495b1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_31168428b0e24d758c1f9b627eb8dbfa</RootNamespace>
+    <AssemblyName>ST_31168428b0e24d758c1f9b627eb8dbfa</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+         <Generator>ResXFileCodeGenerator</Generator>
+         <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+             <AutoGen>True</AutoGen>
+         <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+         <Generator>SettingsSingleFileGenerator</Generator>
+         <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+         <AutoGen>True</AutoGen>
+         <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+         <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask"
+                           HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}"
+                           ApplicationType="usd"
+                           Language="cs"
+                           TemplatesPath=""
+                           DebugInfoCommandLine=""
+                           DebugInfoWorkingDir=""
+                           IconImageList=""/>
+        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex="">
+        </Host>
+        <ProjectClient>
+            <HostIdentifier>SSIS_ST150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:Language>msBuild</msb:Language>
+    <msb:CodeName>ST_31168428b0e24d758c1f9b627eb8dbfa</msb:CodeName>
+    <msb:DisplayName>ST_31168428b0e24d758c1f9b627eb8dbfa</msb:DisplayName>
+    <msb:ProjectId>{AB73F1EF-0DCB-4EBF-BB28-E94919D3EC12}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_31168428b0e24d758c1f9b627eb8dbfa.csproj" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_31168428b0e24d758c1f9b627eb8dbfa.Properties.Settings.get_Default():ST_31168428b0e24d758c1f9b627eb8dbfa.Properties.Sett" +
+    "ings")]
+
+namespace ST_31168428b0e24d758c1f9b627eb8dbfa.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_31168428b0e24d758c1f9b627eb8dbfa.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_31168428b0e24d758c1f9b627eb8dbfa.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_31168428b0e24d758c1f9b627eb8dbfa.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_31168428b0e24d758c1f9b627eb8dbfa.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_31168428b0e24d758c1f9b627eb8dbfa.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <BinaryItem
+            Name="ST_31168428b0e24d758c1f9b627eb8dbfa.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDABlDPmAAAAAAAAAAAOAAIiALATAAABYAAAAIAAAAAAAAEjQA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAMAzAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAGBQAAAAgAAAAFgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAAYAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAD0
+MwAAAAAAAEgAAAACAAUA1CEAADQRAAABAAAAAAAAAAgzAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABswAwD0AAAAAQAAEXMQAAAKCgZyAQAAcHMRAAAKbxIAAAoG
+bxMAAApyMwAAcG8UAAAKBnJbAABwbxUAAAoGcpkAAHBvFgAACgYXbxcAAAoGbxgAAApybAEAcHMZ
+AAAKbxoAAAoGbxgAAApyEQIAcHMZAAAKbxoAAAoGbxgAAApytgIAcHMZAAAKbxoAAAoGbxgAAApy
+WwMAcHMZAAAKbxoAAApyAAQAcCBLAgAAcxsAAAoLBxZvHAAACgdyAQAAcHIeBABwcx0AAApvHgAA
+CgcXbx8AAAoHBm8gAAAK3hQHLAYHbyEAAArcBiwGBm8hAAAK3AIoIgAAChZvIwAACioBHAAAAgCn
+ACzTAAoAAAAAAgAGANfdAAoAAAAAHgIoJAAACioeAiglAAAKKq5+AQAABC0ecjYEAHDQAwAAAigm
+AAAKbycAAApzKAAACoABAAAEfgEAAAQqGn4CAAAEKh4CgAIAAAQqGn4DAAAEKh4CKCkAAAoqLnMI
+AAAGgAMAAAQqAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAA0BAAAI34AAKAE
+AABIBgAAI1N0cmluZ3MAAAAA6AoAAKgEAAAjVVMAkA8AABAAAAAjR1VJRAAAAKAPAACUAQAAI0Js
+b2IAAAAAAAAAAgAAAVcdogkJAwAAAPoBMwAWAAABAAAAJQAAAAUAAAAGAAAACQAAAAEAAAApAAAA
+AgAAABAAAAABAAAAAgAAAAMAAAAEAAAAAQAAAAEAAAADAAAAAQAAAAEAAAAAAJEDAQAAAAAABgAT
+ArAEBgCiArAEBgBfAZ0EDwAkBQAABgCMASwEBgD2ASwEBgDXASwEBgCJAiwEBgAzAiwEBgBMAiwE
+BgCjASwEBgC+AcYCCgBnAv8CCgDWAP8CDgBlAIEDDgAIBoEDBgDmA9YDBgBCAZ0EBgDPBdYDBgCA
+BNAEBgBwBBcEDgASAWsDDgBzAWsDDgDyAAIEBgAnAbAEDgCdBYEDDgA+BIEDDgBUBIEDDgATBoED
+BgABADoDDgAoA+IFDgAeBuIFBgBxANYDCgBZA/8CBgChANYDBgB9ANYDBgA+BiwEAAAAAA4AAAAA
+AAEAAQABABAA9wMfADkAAQABAAAAEADXBDMFTQABAAMAAAEQAGIFMwVhAAMABwADAQAAsQUAAEUA
+BAAKABEA6wOWABEAxgCaABEAVQCeAAYGFwCiAFaAlQWlAFaApgClAFAgAAAAAIYA/QMGAAEAbCEA
+AAAAhhiQBAYAAQB0IQAAAACDGJAEBgABAHwhAAAAAJMIfASpAAEAqCEAAAAAkwiuAK4AAQCvIQAA
+AACTCLoAswABALchAAAAAJYI7QW5AAIAviEAAAAAhhiQBAYAAgDGIQAAAACRGJYEvgACAAAAAQDA
+AgkAkAQBABEAkAQGABkAkAQKACkAkAQQADEAkAQQADkAkAQQAEEAkAQQAEkAkAQQAFEAkAQQAFkA
+kAQQAGEAkAQQAGkAkAQGAJEAkAQGALkAkAQVAMkAkAQGAHkAkAQGANEAkAQQAHkA3QMiAHkAaQQo
+ANkATAAQAHkA1gUQAHkAMQYQAHkAuQMtAHkAvwUyAOkAkAQQAAwATAA+AIEAkAREAIEAewUtAPkA
+kARKAIEAawVQAIEAyAMtAIEAUABXAAkBCgEGAHEAqQVdABEB+QUBAHEAkAQGAJkAkAQGABkBjwBj
+ABkBOgZsAKEAkARyAMEAkAQGAAgAFACMAAgAGACRACkAcwD5AC4ACwDRAC4AEwDaAC4AGwD5AC4A
+IwACAS4AKwArAS4AMwArAS4AOwArAS4AQwACAS4ASwAxAS4AUwArAS4AWwBIAUMAYwCRAEkAcwD5
+AGEAewCRAGMAawCRABsAAwABAAQAAwAAAIAEwgAAAM4AxwAAAPEFzAACAAQAAwACAAUABQABAAYA
+BQACAAcABwA3AASAAAABAAAAMx6UaAAAAAAAAB8AAAAEAAAAAAAAAAAAAAB6AEMAAAAAAA8AAAAA
+AAAAAAAAAIMA4AIAAAAABAAAAAAAAAAAAAAAegDWAwAAAAAAAAAAAQAAAOEEAAAFAAIAAAAAAABD
+b2xsZWN0aW9uYDEAPE1vZHVsZT4AdmFsdWVfXwBTVF8zMTE2ODQyOGIwZTI0ZDc1OGMxZjliNjI3
+ZWI4ZGJmYQBtc2NvcmxpYgBBZGQAU2VuZABkZWZhdWx0SW5zdGFuY2UATWFpbE1lc3NhZ2UASURp
+c3Bvc2FibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAVHlwZQBGYWlsdXJl
+AGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBWU1RBUlRTY3JpcHRPYmpl
+Y3RNb2RlbEJhc2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARGlzcG9zZQBFZGl0b3JCcm93c2Fi
+bGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0
+cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2Vt
+Ymx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3
+b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2Ny
+aXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQ
+cm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRUYXNr
+RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBh
+dGliaWxpdHlBdHRyaWJ1dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBNaWNyb3Nv
+ZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuVGFza3MuU2Ny
+aXB0VGFzawBOZXR3b3JrQ3JlZGVudGlhbABTeXN0ZW0uQ29sbGVjdGlvbnMuT2JqZWN0TW9kZWwA
+U2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFN5c3RlbS5OZXQuTWFpbABT
+VF8zMTE2ODQyOGIwZTI0ZDc1OGMxZjliNjI3ZWI4ZGJmYS5kbGwAc2V0X0lzQm9keUh0bWwAc2V0
+X0VuYWJsZVNzbABTeXN0ZW0Ac2V0X0Zyb20ARW51bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5
+c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9u
+AE1haWxBZGRyZXNzQ29sbGVjdGlvbgBBdHRhY2htZW50Q29sbGVjdGlvbgBnZXRfVG8AQ3VsdHVy
+ZUluZm8AZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNz
+AFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTVF8zMTE2
+ODQyOGIwZTI0ZDc1OGMxZjliNjI3ZWI4ZGJmYS5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJj
+ZXMARGVidWdnaW5nTW9kZXMAU1RfMzExNjg0MjhiMGUyNGQ3NThjMWY5YjYyN2ViOGRiZmEuUHJv
+cGVydGllcwBTZXR0aW5ncwBzZXRfQ3JlZGVudGlhbHMAc2V0X1VzZURlZmF1bHRDcmVkZW50aWFs
+cwBTdWNjZXNzAE1haWxBZGRyZXNzAGdldF9EdHMAU2NyaXB0UmVzdWx0cwBnZXRfQXR0YWNobWVu
+dHMAT2JqZWN0AHNldF9TdWJqZWN0AFN5c3RlbS5OZXQAZ2V0X0RlZmF1bHQAc2V0X1Rhc2tSZXN1
+bHQAU210cENsaWVudABBdHRhY2htZW50AElDcmVkZW50aWFsc0J5SG9zdABzZXRfQm9keQBnZXRf
+QXNzZW1ibHkAAAAxbQBlAGwAaQBzAHMAYQBkAGMAYQBiAHIAYQBsAEAAZwBtAGEAaQBsAC4AYwBv
+AG0AACdtAGUAbABpAHMAcwBhADEANAAyAEAAbABpAHYAZQAuAGMAbwBtAAA9UAByAGEAYwB0AGkA
+YwBhACAARgBpAG4AYQBsACAARABhAHQAYQAgAE0AYQBuAGEAZwBlAG0AZQBuAHQAAIDRPABoADEA
+PgBIAG8AbABhACwAIABWAGUAcgAgAGEAZABqAHUAbgB0AG8AcwAgAGwAbwBzACAAZgBpAGMAaABl
+AHIAbwBzACAAVAB4AHQAIABzAGUAZwB1AG4AIABsAG8AIABzAG8AbABpAGMAaQB0AGEAZABvACAA
+ZQBuACAAbABhACAAUAByAGEAYwB0AGkAYwBhACAARgBpAG4AYQBsACAAZABlACAARABhAHQAYQAg
+AE0AYQBuAGEAZwBlAG0AZQBuAHQAPAAvAGgAMQA+AACAo0MAOgBcAFUAcwBlAHIAcwBcAG0AZQBs
+AGkAcwBcAE8AbgBlAEQAcgBpAHYAZQBcAEQAbwBjAHUAbQBlAG4AdABzAFwARQBBAEUAXABEAGEA
+dABhACAATQBhAG4AYQBnAGUAbQBlAG4AdABcAFAAcgBhAGMAdABpAGMAYQAgAEYAaQBuAGEAbABc
+AGYAaQBjAGgAZQByAG8AMQAuAHQAeAB0AACAo0MAOgBcAFUAcwBlAHIAcwBcAG0AZQBsAGkAcwBc
+AE8AbgBlAEQAcgBpAHYAZQBcAEQAbwBjAHUAbQBlAG4AdABzAFwARQBBAEUAXABEAGEAdABhACAA
+TQBhAG4AYQBnAGUAbQBlAG4AdABcAFAAcgBhAGMAdABpAGMAYQAgAEYAaQBuAGEAbABcAGYAaQBj
+AGgAZQByAG8AMgAuAHQAeAB0AACAo0MAOgBcAFUAcwBlAHIAcwBcAG0AZQBsAGkAcwBcAE8AbgBl
+AEQAcgBpAHYAZQBcAEQAbwBjAHUAbQBlAG4AdABzAFwARQBBAEUAXABEAGEAdABhACAATQBhAG4A
+YQBnAGUAbQBlAG4AdABcAFAAcgBhAGMAdABpAGMAYQAgAEYAaQBuAGEAbABcAGYAaQBjAGgAZQBy
+AG8AMwAuAHQAeAB0AACAo0MAOgBcAFUAcwBlAHIAcwBcAG0AZQBsAGkAcwBcAE8AbgBlAEQAcgBp
+AHYAZQBcAEQAbwBjAHUAbQBlAG4AdABzAFwARQBBAEUAXABEAGEAdABhACAATQBhAG4AYQBnAGUA
+bQBlAG4AdABcAFAAcgBhAGMAdABpAGMAYQAgAEYAaQBuAGEAbABcAGYAaQBjAGgAZQByAG8ANAAu
+AHQAeAB0AAAdcwBtAHQAcAAuAGcAbQBhAGkAbAAuAGMAbwBtAAAXZQBhAGUAMgAwADIAMQBkAGEA
+dABhAABxUwBUAF8AMwAxADEANgA4ADQAMgA4AGIAMABlADIANABkADcANQA4AGMAMQBmADkAYgA2
+ADIANwBlAGIAOABkAGIAZgBhAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMA
+ZQBzAAD1sWU8IrZJQZKJ+0pfr1sKAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFZBgcCEj0SQQUg
+AQESaQQgABJtBCABAQIEIAAScQYVEnkBEnUFIAEBEwAFIAIBDggFIAIBDg4GIAEBEoCBBSABARI9
+BSAAEoCJCAABEoCNEYCRBSAAEoCVByACAQ4SgJUIt3pcVhk04IkIiYRdzYCAzJEEAAAAAAQBAAAA
+AwYSUQMGElUDBhIQAgYIAwYRFAQAABJRBAAAElUFAAEBElUEAAASEAMAAAEECAASUQQIABJVBAgA
+EhAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NU
+XzMxMTY4NDI4YjBlMjRkNzU4YzFmOWI2MjdlYjhkYmZhAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAg
+IDIwMjEAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxh
+eU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43AAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJj
+ZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1
+dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1
+bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA6DMAAAAAAAAAAAAAAjQAAAAg
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPQzAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5k
+bGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABI
+AAAAWEAAABoEAAAAAAAAAAAAABoENAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAA
+AAC9BO/+AAABAAAAAQCUaDMeAAABAJRoMx4/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAA
+AAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4A
+AAAAAAAAsAR6AwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAABWAwAAAQAwADAAMAAw
+ADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4A
+eQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAA
+AFMAVABfADMAMQAxADYAOAA0ADIAOABiADAAZQAyADQAZAA3ADUAOABjADEAZgA5AGIANgAyADcA
+ZQBiADgAZABiAGYAYQAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgA3
+ADcAMwAxAC4AMgA2ADcANwAyAAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMA
+VABfADMAMQAxADYAOAA0ADIAOABiADAAZQAyADQAZAA3ADUAOABjADEAZgA5AGIANgAyADcAZQBi
+ADgAZABiAGYAYQAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAA
+QwBvAHAAeQByAGkAZwBoAHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBh
+AGQAZQBtAGEAcgBrAHMAAAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEA
+bQBlAAAAUwBUAF8AMwAxADEANgA4ADQAMgA4AGIAMABlADIANABkADcANQA4AGMAMQBmADkAYgA2
+ADIANwBlAGIAOABkAGIAZgBhAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUA
+AAAAAFMAVABfADMAMQAxADYAOAA0ADIAOABiADAAZQAyADQAZAA3ADUAOABjADEAZgA5AGIANgAy
+ADcAZQBiADgAZABiAGYAYQAAAEIADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEA
+LgAwAC4ANwA3ADMAMQAuADIANgA3ADcAMgAAAAAARgAPAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBl
+AHIAcwBpAG8AbgAAADEALgAwAC4ANwA3ADMAMQAuADIANgA3ADcAMgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAAAUNAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
+        </ScriptProject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{16B9A752-8871-4316-9499-A456AF1AF0B0}"
+      DTS:From="Package\Carga de Fichero 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Carga de Fichero 2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{7BA0340A-39B8-469B-9692-E69FE8538752}"
+      DTS:From="Package\Carga de Fichero 2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Carga de Fichero 3" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{E056D03E-8085-41E3-8B0F-DD19B1511BA6}"
+      DTS:From="Package\Carga de Fichero 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Carga de Fichero 4" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{1A4EB580-35A4-4618-8FA7-F55A539C64F1}"
+      DTS:From="Package\Carga de Fichero 4"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Script Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Carga de Fichero 1"
+          TopLeft="223,154" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Carga de Fichero 2"
+          TopLeft="224,230" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Carga de Fichero 3"
+          TopLeft="220,292" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Carga de Fichero 4"
+          TopLeft="216,376" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Script Task"
+          TopLeft="238.5,447.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="310,196">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="397,251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-4,62"
+              Start="0,0"
+              End="3.5,62">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,58" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,58"
+                    Point2="22.5,62"
+                    Point3="18.5,62" />
+                  <mssgle:LineSegment
+                    End="3.5,62" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="304.5,334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="304,418">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.5"
+              Start="0,0"
+              End="0,22">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carga de Fichero 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Carga de Fichero 1\ODBC Source"
+          TopLeft="264.5,58.5" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Carga de Fichero 1\Fichero 1"
+          TopLeft="277.5,146.5" />
+        <EdgeLayout
+          Id="Package\Carga de Fichero 1.Paths[ODBC Source Output]"
+          TopLeft="339.5,100.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga de Fichero 1\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Carga de Fichero 2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Carga de Fichero 2\ODBC Source"
+          TopLeft="330,51" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Carga de Fichero 2\Flat File Destination"
+          TopLeft="336,118" />
+        <EdgeLayout
+          Id="Package\Carga de Fichero 2.Paths[ODBC Source Output]"
+          TopLeft="404.5,93">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.5,25"
+              Start="0,0"
+              End="19.5,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="4,12.5" />
+                  <mssgle:LineSegment
+                    End="15.5,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,12.5"
+                    Point2="19.5,12.5"
+                    Point3="19.5,16.5" />
+                  <mssgle:LineSegment
+                    End="19.5,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga de Fichero 2\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Carga de Fichero 3">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Carga de Fichero 3\ODBC Source"
+          TopLeft="306,48" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Carga de Fichero 3\Flat File Destination"
+          TopLeft="304,115" />
+        <EdgeLayout
+          Id="Package\Carga de Fichero 3.Paths[ODBC Source Output]"
+          TopLeft="380.5,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.5,25"
+              Start="0,0"
+              End="11.5,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="4,12.5" />
+                  <mssgle:LineSegment
+                    End="7.5,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.5,12.5"
+                    Point2="11.5,12.5"
+                    Point3="11.5,16.5" />
+                  <mssgle:LineSegment
+                    End="11.5,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga de Fichero 3\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Carga de Fichero 4">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Carga de Fichero 4\ODBC Source"
+          TopLeft="189.5,49.5" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Carga de Fichero 4\Flat File Destination"
+          TopLeft="170.5,135.5" />
+        <EdgeLayout
+          Id="Package\Carga de Fichero 4.Paths[ODBC Source Output]"
+          TopLeft="261.25,91.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga de Fichero 4\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
