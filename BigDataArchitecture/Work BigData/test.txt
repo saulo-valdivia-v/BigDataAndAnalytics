@@ -1,0 +1,15 @@
+$ cd /opt
+
+$ sudo wget -O robo3t.tar.gz https://download.studio3t.com/robomongo/linux/robo3t-1.4.3-linux-x86_64-48f7dfd.tar.gz
+
+$ sudo tar –xf robo3t.tar.gz
+
+$ sudo rm robo3t.tar.gz
+
+$ sudo ln –s ./robo3t/bin/robo3t /usr/local/bin/robo3t
+
+La siguiente sentencia corrige un error de ejecución de robo3t en centOs porque no encuentra la librería libcurl-gnutils.so.4:
+
+$ sudo ln -s /usr/lib64/libcurl.so.4 ./robo3t/lib/libcurl-gnutls.so.4
+
+mongoimport --host localhost --db datos_lecturer --collection lecturer --type json --file datos_lecturer.json

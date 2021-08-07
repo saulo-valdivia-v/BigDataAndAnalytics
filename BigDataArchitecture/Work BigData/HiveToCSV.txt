@@ -1,0 +1,143 @@
+CREATE TABLE table_csv_export_data_1
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED as textfile
+AS
+select
+'PROVINCIA' as PROVINCIA
+,'MUNICIPIO' as MUNICIPIO
+,'ESTACION' as ESTACION
+,'ANO' as ANO
+,'MES' as MES
+,'DIA' as DIA
+,'H01' as H01
+,'V01' as V01
+,'H02' as H02
+,'V02' as V02
+,'H03' as H03
+,'V03' as V03
+,'H04' as H04
+,'V04' as V04
+,'H05' as H05
+,'V05' as V05
+,'H06' as H06
+,'V06' as V06
+,'H07' as H07
+,'V07' as V07
+,'H08' as H08
+,'V08' as V08
+,'H09' as H09
+,'V09' as V09
+,'H10' as H10
+,'V10' as V10
+,'H11' as H11
+,'V11' as V11
+,'H12' as H12
+,'V12' as V12
+,'H13' as H13
+,'V13' as V13
+,'H14' as H14
+,'V14' as V14
+,'H15' as H15
+,'V15' as V15
+,'H16' as H16
+,'V16' as V16
+,'H17' as H17
+,'V17' as V17
+,'H18' as H18
+,'V18' as V18
+,'H19' as H19
+,'V19' as V19
+,'H20' as H20
+,'V20' as V20
+,'H21' as H21
+,'V21' as V21
+,'H22' as H22
+,'V22' as V22
+,'H23' as H23
+,'V23' as V23
+,'H24' as H24
+,'V24' as V24;
+
+
+
+
+
+INSERT INTO table_csv_export_data_1
+SELECT
+ PROVINCIA
+ ,MUNICIPIO
+ ,ESTACION
+ ,ANO
+ ,MES
+ ,DIA
+ ,H01
+ ,V01
+ ,H02
+ ,V02
+ ,H03
+ ,V03
+ ,H04
+ ,V04
+ ,H05
+ ,V05
+ ,H06
+ ,V06
+ ,H07
+ ,V07
+ ,H08
+ ,V08
+ ,H09
+ ,V09
+ ,H10
+ ,V10
+ ,H11
+ ,V11
+ ,H12
+ ,V12
+ ,H13
+ ,V13
+ ,H14
+ ,V14
+ ,H15
+ ,V15
+ ,H16
+ ,V16
+ ,H17
+ ,V17
+ ,H18
+ ,V18
+ ,H19
+ ,V19
+ ,H20
+ ,V20
+ ,H21
+ ,V21
+ ,H22
+ ,V22
+ ,H23
+ ,V23
+ ,H24
+ ,V24
+ FROM test1 where MES='01' and DIA='01'
+ 
+ hdfs dfs -cat /user/hive/warehouse/table_csv_export_data_pec1/* > ~/pec1.csv
+ 
+ 
+ db.Prueba3.aggregate(
+   [
+     {"$match":{"MES":{"$gte":1, "$lte":12}}},
+     {
+       $group:
+         {
+           _id: {
+            "ANO": "$ANO",   
+            "MES": "$MES",
+            "DIA": "$DIA",
+            "MAGNITUD": "$MAGNITUD"
+            },           
+            Media: { $avg:{ $add: [ "$H01", "$H02", "$H03", "$H04", "$H05", "$H06", "$H07", "$H08", "$H09", "$H10", "$H11", "$H12",
+                                    "$H13", "$H14", "$H15", "$H16", "$H17", "$H18", "$H19", "$H20", "$H21", "$H22", "$H23", "$H24"] } }
+         }
+     }
+   ])
