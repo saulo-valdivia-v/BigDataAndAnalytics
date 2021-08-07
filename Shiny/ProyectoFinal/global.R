@@ -1,0 +1,10 @@
+library(shiny)
+library(shinydashboard)
+library(plotly)
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(shinyWidgets)
+library(quantmod) 
+
+source('scripts/data_treatment.R')

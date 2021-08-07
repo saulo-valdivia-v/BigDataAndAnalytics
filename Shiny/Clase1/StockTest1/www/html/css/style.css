@@ -1,0 +1,72 @@
+#stockName {
+	font-family: Muli,sans-serif;
+    font-size: 1.71429rem;
+    font-weight: 800;
+    line-height: 1.125;	
+}
+
+#stockId {
+	color: #777;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+}
+
+#stockPrice {
+	font-size: 3.5rem;
+    font-weight: 700;
+    font-family: Lato,monospace;
+    line-height: 1;    
+    letter-spacing: -.025em;
+	text-align: right;
+}
+
+#stockPrices {
+  font-size: 15px;
+}
+
+#stockPrices table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+#stockPrices th {
+  text-align: center;
+  padding: 16px;
+}
+
+#stockPrices td {
+  text-align: left;
+  padding: 16px;
+}
+
+#stockPrices tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#pTest {
+  font-size: 15px;
+}
+
+#pTest table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+#pTest th {
+  text-align: left;
+  padding: 16px;
+}
+
+#pTest td {
+  text-align: left;
+  padding: 16px;
+}
+
+#pTest tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

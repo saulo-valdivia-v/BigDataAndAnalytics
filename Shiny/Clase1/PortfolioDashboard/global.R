@@ -1,0 +1,10 @@
+library(shiny)
+library(shinydashboard)
+library(plotly)
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(shinyWidgets)
+library(quantmod) 
+
+dataP <- read.csv("data/Positions.csv")

@@ -1,0 +1,311 @@
+Date,Security,SecurityName,Action,Quantity,Price,Total,Area
+10/31/2019,AMD,Advanced Micro Devices Inc,Deposit,1.00,33.13,33.13,Information Technology
+1/11/2019,AKAM,Akamai Technologies Inc,Deposit,2.00,86.5,173.00,Information Technology
+2/11/2019,APH,Amphenol Corp,Buy,4.00,102.78,411.12,Information Technology
+5/11/2019,CSCO,Cisco Systems,Deposit,10.00,47.48,474.80,Information Technology
+6/11/2019,INTC,Intel Corp.,Buy,6.00,57.55,345.30,Information Technology
+7/11/2019,IBM,International Business Machines,Deposit,6.00,138.78,832.68,Information Technology
+8/11/2019,INTU,Intuit Inc.,Deposit,2.00,259.35,518.70,Information Technology
+9/11/2019,IPGP,IPG Photonics Corp.,Deposit,8.00,147.25,"1,178.00",Information Technology
+12/11/2019,BAX,Baxter International Inc.,Buy,1.00,78.86,78.86,Health Care
+11/13/2019,GILD,Gilead Sciences,Deposit,8.00,64.32,514.56,Health Care
+11/14/2019,HCA,HCA Healthcare,Buy,1.00,134.39,134.39,Health Care
+11/15/2019,HSIC,Henry Schein,Deposit,7.00,68.18,477.26,Health Care
+11/16/2019,PFE,Pfizer Inc.,Deposit,6.00,35.37,212.22,Health Care
+11/19/2019,C,Citigroup Inc.,Buy,10.00,74.4,744.00,Financials
+11/20/2019,CFG,Citizens Financial Group,Buy,1.00,38.03,38.03,Financials
+11/21/2019,GS,Goldman Sachs Group,Deposit,1.00,217.91,217.91,Financials
+11/22/2019,HIG,Hartford Financial Svc.Gp.,Buy,6.00,61.63,369.78,Financials
+11/23/2019,HBAN,Huntington Bancshares,Deposit,3.00,14.86,44.58,Financials
+11/26/2019,JPM,JPMorgan Chase & Co.,Buy,5.00,131.49,657.45,Financials
+11/27/2019,KEY,KeyCorp,Buy,7.00,19.29,135.03,Financials
+11/28/2019,AMD,Advanced Micro Devices Inc,Buy,10.00,39.41,394.10,Information Technology
+11/30/2019,APH,Amphenol Corp,Buy,2.00,104,208.00,Information Technology
+3/12/2019,CSCO,Cisco Systems,Buy,10.00,44.7,447.00,Information Technology
+4/12/2019,INTC,Intel Corp.,Buy,6.00,56.07,336.42,Information Technology
+5/12/2019,IBM,International Business Machines,Buy,2.00,131.99,263.98,Information Technology
+6/12/2019,INTU,Intuit Inc.,Deposit,4.00,253.78,"1,015.12",Information Technology
+7/12/2019,IPGP,IPG Photonics Corp.,Buy,9.00,141.98,"1,277.82",Information Technology
+10/12/2019,BAX,Baxter International Inc.,Deposit,10.00,81.55,815.50,Health Care
+11/12/2019,GILD,Gilead Sciences,Buy,6.00,67.08,402.48,Health Care
+12/12/2019,HCA,HCA Healthcare,Buy,8.00,142.53,"1,140.24",Health Care
+12/13/2019,HSIC,Henry Schein,Buy,7.00,68.82,481.74,Health Care
+12/14/2019,PFE,Pfizer Inc.,Deposit,4.00,36.37,145.48,Health Care
+12/17/2019,C,Citigroup Inc.,Deposit,6.00,76.91,461.46,Financials
+12/18/2019,CFG,Citizens Financial Group,Deposit,10.00,40.53,405.30,Financials
+12/19/2019,GS,Goldman Sachs Group,Buy,10.00,230.45,"2,304.50",Financials
+12/20/2019,HIG,Hartford Financial Svc.Gp.,Buy,1.00,60.78,60.78,Financials
+12/21/2019,HBAN,Huntington Bancshares,Buy,3.00,15.15,45.45,Financials
+12/24/2019,JPM,JPMorgan Chase & Co.,Deposit,8.00,137.2,"1,097.60",Financials
+12/25/2019,KEY,KeyCorp,Deposit,4.00,20.35,81.40,Financials
+12/27/2019,AKAM,Akamai Technologies Inc,Buy,1.00,86.34,86.34,Information Technology
+12/28/2019,APH,Amphenol Corp,Buy,5.00,108.06,540.30,Information Technology
+12/31/2019,CSCO,Cisco Systems,Buy,7.00,47.59,333.13,Information Technology
+1/1/2020,INTC,Intel Corp.,Deposit,3.00,59.85,179.55,Information Technology
+3/1/2020,INTU,Intuit Inc.,Buy,7.00,266.16,"1,863.12",Information Technology
+4/1/2020,IPGP,IPG Photonics Corp.,Buy,1.00,141.82,141.82,Information Technology
+7/1/2020,BAX,Baxter International Inc.,Buy,4.00,85.29,341.16,Health Care
+8/1/2020,GILD,Gilead Sciences,Deposit,4.00,65.12,260.48,Health Care
+9/1/2020,HCA,HCA Healthcare,Deposit,2.00,149.28,298.56,Health Care
+10/1/2020,HSIC,Henry Schein,Deposit,2.00,66.2,132.40,Health Care
+1/11/2020,PFE,Pfizer Inc.,Buy,8.00,37.47,299.76,Health Care
+1/14/2020,C,Citigroup Inc.,Deposit,6.00,80.65,483.90,Financials
+1/15/2020,CFG,Citizens Financial Group,Buy,2.00,40.01,80.02,Financials
+1/16/2020,GS,Goldman Sachs Group,Deposit,2.00,245.21,490.42,Financials
+1/17/2020,HIG,Hartford Financial Svc.Gp.,Deposit,8.00,60.27,482.16,Financials
+1/18/2020,HBAN,Huntington Bancshares,Deposit,8.00,14.71,117.68,Financials
+1/22/2020,KEY,KeyCorp,Deposit,2.00,19.5,39.00,Financials
+1/23/2020,AMD,Advanced Micro Devices Inc,Buy,2.00,51.43,102.86,Information Technology
+1/24/2020,AKAM,Akamai Technologies Inc,Deposit,9.00,96.44,867.96,Information Technology
+1/25/2020,APH,Amphenol Corp,Deposit,9.00,105.36,948.24,Information Technology
+1/28/2020,CSCO,Cisco Systems,Buy,4.00,47.47,189.88,Information Technology
+1/29/2020,INTC,Intel Corp.,Buy,5.00,67.31,336.55,Information Technology
+1/30/2020,IBM,International Business Machines,Deposit,4.00,137.69,550.76,Information Technology
+31/1/2020,INTU,Intuit Inc.,Buy,1.00,286.63,286.63,Information Technology
+1/2/2020,IPGP,IPG Photonics Corp.,Deposit,7.00,127.67,893.69,Information Technology
+4/2/2020,BAX,Baxter International Inc.,Buy,2.00,89.69,179.38,Health Care
+5/2/2020,GILD,Gilead Sciences,Buy,5.00,67.4,337.00,Health Care
+6/2/2020,HCA,HCA Healthcare,Deposit,5.00,151.04,755.20,Health Care
+7/2/2020,HSIC,Henry Schein,Buy,5.00,70.97,354.85,Health Care
+8/2/2020,PFE,Pfizer Inc.,Deposit,9.00,36.1,324.90,Health Care
+11/2/2020,C,Citigroup Inc.,Buy,2.00,78.48,156.96,Financials
+2/12/2020,CFG,Citizens Financial Group,Buy,9.00,39,351.00,Financials
+2/13/2020,GS,Goldman Sachs Group,Buy,2.00,238.65,477.30,Financials
+2/14/2020,HIG,Hartford Financial Svc.Gp.,Deposit,8.00,59.24,473.92,Financials
+2/15/2020,HBAN,Huntington Bancshares,Buy,4.00,14.08,56.32,Financials
+2/19/2020,KEY,KeyCorp,Deposit,5.00,19.56,97.80,Financials
+2/20/2020,AMD,Advanced Micro Devices Inc,Deposit,2.00,58.9,117.80,Information Technology
+2/21/2020,AKAM,Akamai Technologies Inc,Buy,7.00,101.47,710.29,Information Technology
+2/22/2020,APH,Amphenol Corp,Buy,9.00,101.75,915.75,Information Technology
+2/25/2020,CSCO,Cisco Systems,Buy,8.00,44,352.00,Information Technology
+2/26/2020,INTC,Intel Corp.,Deposit,8.00,59.73,477.84,Information Technology
+2/27/2020,IBM,International Business Machines,Deposit,5.00,139.75,698.75,Information Technology
+2/28/2020,INTU,Intuit Inc.,Deposit,6.00,268.77,"1,612.62",Information Technology
+29/2/2020,IPGP,IPG Photonics Corp.,Buy,8.00,127.64,"1,021.12",Information Technology
+3/3/2020,BAX,Baxter International Inc.,Deposit,6.00,87.18,523.08,Health Care
+4/3/2020,GILD,Gilead Sciences,Buy,10.00,74.21,742.10,Health Care
+5/3/2020,HCA,HCA Healthcare,Deposit,2.00,135.23,270.46,Health Care
+6/3/2020,HSIC,Henry Schein,Deposit,7.00,59.25,414.75,Health Care
+7/3/2020,PFE,Pfizer Inc.,Deposit,10.00,33.23,332.30,Health Care
+10/3/2020,C,Citigroup Inc.,Buy,5.00,51.37,256.85,Financials
+11/3/2020,CFG,Citizens Financial Group,Deposit,7.00,25.41,177.87,Financials
+3/12/2020,GS,Goldman Sachs Group,Buy,1.00,171.89,171.89,Financials
+3/13/2020,HIG,Hartford Financial Svc.Gp.,Deposit,1.00,40.18,40.18,Financials
+3/14/2020,HBAN,Huntington Bancshares,Deposit,8.00,9.5,76.00,Financials
+3/17/2020,JPM,JPMorgan Chase & Co.,Buy,7.00,88.36,618.52,Financials
+3/18/2020,KEY,KeyCorp,Buy,4.00,10.24,40.96,Financials
+3/19/2020,AMGN,Amgen Inc.,Deposit,10.00,204.88,"2,048.80",Health Care
+3/20/2020,ANTM,Anthem,Buy,2.00,200.87,401.74,Health Care
+3/21/2020,BAX,Baxter International Inc.,Deposit,10.00,75.75,757.50,Health Care
+3/24/2020,HSIC,Henry Schein,Buy,2.00,43.18,86.36,Health Care
+3/25/2020,PFE,Pfizer Inc.,Buy,7.00,28.18,197.26,Health Care
+3/26/2020,MDT,Medtronic plc,Deposit,3.00,86.82,260.46,Health Care
+3/27/2020,CINF,Cincinnati Financial,Buy,2.00,78.72,157.44,Financials
+3/28/2020,C,Citigroup Inc.,Deposit,7.00,43.8,306.60,Financials
+31/3/2020,HIG,Hartford Financial Svc.Gp.,Buy,6.00,35.84,215.04,Financials
+1/4/2020,HBAN,Huntington Bancshares,Buy,9.00,8.21,73.89,Financials
+2/4/2020,ICE,Intercontinental Exchange,Buy,4.00,79.31,317.24,Financials
+3/4/2020,IVZ,Invesco Ltd.,Deposit,8.00,8.22,65.76,Financials
+4/4/2020,JPM,JPMorgan Chase & Co.,Buy,1.00,84.05,84.05,Financials
+7/4/2020,ANTM,Anthem,Deposit,10.00,225.72,"2,257.20",Health Care
+8/4/2020,BAX,Baxter International Inc.,Deposit,4.00,82.51,330.04,Health Care
+9/4/2020,GILD,Gilead Sciences,Deposit,1.00,74.99,74.99,Health Care
+4/10/2020,HCA,HCA Healthcare,Buy,9.00,108.06,972.54,Health Care
+4/14/2020,CINF,Cincinnati Financial,Buy,8.00,82.64,661.12,Financials
+4/15/2020,C,Citigroup Inc.,Deposit,1.00,45.42,45.42,Financials
+4/16/2020,CFG,Citizens Financial Group,Deposit,9.00,18.58,167.22,Financials
+4/17/2020,GS,Goldman Sachs Group,Deposit,2.00,177.04,354.08,Financials
+4/18/2020,HIG,Hartford Financial Svc.Gp.,Buy,2.00,40.01,80.02,Financials
+4/21/2020,IVZ,Invesco Ltd.,Deposit,8.00,9.09,72.72,Financials
+4/22/2020,JPM,JPMorgan Chase & Co.,Buy,1.00,89.05,89.05,Financials
+4/23/2020,KEY,KeyCorp,Deposit,10.00,10.23,102.30,Financials
+4/24/2020,AMD,Advanced Micro Devices Inc,Deposit,10.00,55.9,559.00,Information Technology
+4/25/2020,AKAM,Akamai Technologies Inc,Deposit,3.00,102.78,308.34,Information Technology
+4/28/2020,CDW,CDW,Buy,2.00,106.28,212.56,Information Technology
+4/29/2020,CSCO,Cisco Systems,Deposit,4.00,42.49,169.96,Information Technology
+30/4/2020,INTC,Intel Corp.,Buy,2.00,61.8,123.60,Information Technology
+1/5/2020,IBM,International Business Machines,Deposit,6.00,125.56,753.36,Information Technology
+2/5/2020,INTU,Intuit Inc.,Deposit,5.00,261.13,"1,305.65",Information Technology
+5/5/2020,C,Citigroup Inc.,Buy,7.00,45.12,315.84,Financials
+6/5/2020,CFG,Citizens Financial Group,Buy,5.00,21.18,105.90,Financials
+7/5/2020,GS,Goldman Sachs Group,Deposit,4.00,176.92,707.68,Financials
+8/5/2020,HIG,Hartford Financial Svc.Gp.,Buy,4.00,34.91,139.64,Financials
+9/5/2020,HBAN,Huntington Bancshares,Deposit,10.00,8.65,86.50,Financials
+5/12/2020,JPM,JPMorgan Chase & Co.,Buy,9.00,89.97,809.73,Financials
+5/13/2020,KEY,KeyCorp,Buy,7.00,10.17,71.19,Financials
+5/14/2020,AMD,Advanced Micro Devices Inc,Deposit,6.00,52.18,313.08,Information Technology
+5/15/2020,AKAM,Akamai Technologies Inc,Buy,2.00,97.23,194.46,Information Technology
+5/16/2020,APH,Amphenol Corp,Deposit,6.00,82.31,493.86,Information Technology
+5/19/2020,CSCO,Cisco Systems,Buy,6.00,45.06,270.36,Information Technology
+5/20/2020,INTC,Intel Corp.,Buy,3.00,60.29,180.87,Information Technology
+5/21/2020,IBM,International Business Machines,Buy,9.00,121.38,"1,092.42",Information Technology
+5/22/2020,INTU,Intuit Inc.,Deposit,7.00,290,"2,030.00",Information Technology
+5/23/2020,IPGP,IPG Photonics Corp.,Buy,10.00,157.39,"1,573.90",Information Technology
+5/27/2020,GS,Goldman Sachs Group,Deposit,1.00,196.06,196.06,Financials
+5/28/2020,HIG,Hartford Financial Svc.Gp.,Deposit,10.00,39.27,392.70,Financials
+5/29/2020,HBAN,Huntington Bancshares,Buy,8.00,9.11,72.88,Financials
+30/5/2020,ICE,Intercontinental Exchange,Buy,5.00,97.25,486.25,Financials
+2/6/2020,KEY,KeyCorp,Buy,4.00,11.85,47.40,Financials
+3/6/2020,AMD,Advanced Micro Devices Inc,Deposit,4.00,53.54,214.16,Information Technology
+4/6/2020,AKAM,Akamai Technologies Inc,Deposit,4.00,103.01,412.04,Information Technology
+5/6/2020,APH,Amphenol Corp,Deposit,10.00,101.57,"1,015.70",Information Technology
+6/6/2020,CDNS,Cadence Design Systems,Buy,9.00,91.4,822.60,Information Technology
+9/6/2020,INTC,Intel Corp.,Deposit,2.00,63.67,127.34,Information Technology
+10/6/2020,IBM,International Business Machines,Buy,8.00,131.87,"1,054.96",Information Technology
+6/11/2020,INTU,Intuit Inc.,Deposit,10.00,295.87,"2,958.70",Information Technology
+6/12/2020,IPGP,IPG Photonics Corp.,Deposit,8.00,155.73,"1,245.84",Information Technology
+6/13/2020,HIG,Hartford Financial Svc.Gp.,Deposit,6.00,40.03,240.18,Financials
+6/16/2020,IVZ,Invesco Ltd.,Buy,6.00,10.74,64.44,Financials
+6/17/2020,JPM,JPMorgan Chase & Co.,Deposit,5.00,102.06,510.30,Financials
+6/18/2020,KEY,KeyCorp,Buy,4.00,13.48,53.92,Financials
+6/19/2020,AMGN,Amgen Inc.,Deposit,6.00,230.32,"1,381.92",Health Care
+6/20/2020,ANTM,Anthem,Deposit,8.00,266.43,"2,131.44",Health Care
+6/23/2020,HCA,HCA Healthcare,Buy,7.00,98.32,688.24,Health Care
+6/24/2020,HSIC,Henry Schein,Buy,5.00,59.35,296.75,Health Care
+6/25/2020,PFE,Pfizer Inc.,Deposit,3.00,30.54,91.62,Health Care
+6/26/2020,MDT,Medtronic plc,Buy,2.00,88.86,177.72,Health Care
+27/6/2020,CSCO,Cisco Systems,Deposit,8.00,46.31,370.48,Information Technology
+30/6/2020,INTU,Intuit Inc.,Buy,2.00,287.92,575.84,Information Technology
+1/7/2020,IPGP,IPG Photonics Corp.,Buy,10.00,160.39,"1,603.90",Information Technology
+2/7/2020,HIG,Hartford Financial Svc.Gp.,Deposit,4.00,37.7,150.80,Financials
+3/7/2020,HBAN,Huntington Bancshares,Buy,7.00,8.6,60.20,Financials
+7/7/2020,CSCO,Cisco Systems,Sell,-4.00,46.42,-185.68,Information Technology
+8/7/2020,INTC,Intel Corp.,Sell,-4.00,58.31,-233.24,Information Technology
+9/7/2020,IBM,International Business Machines,Sell,-1.00,117.71,-117.71,Information Technology
+7/10/2020,INTU,Intuit Inc.,Sell,-5.00,307.91,"-1,539.55",Information Technology
+7/11/2020,IPGP,IPG Photonics Corp.,Sell,-5.00,161.62,-808.10,Information Technology
+7/14/2020,CFG,Citizens Financial Group,Sell,-2.00,24.37,-48.74,Financials
+7/15/2020,GS,Goldman Sachs Group,Sell,-5.00,214.01,"-1,070.05",Financials
+7/16/2020,HIG,Hartford Financial Svc.Gp.,Sell,-3.00,40.41,-121.23,Financials
+7/17/2020,HBAN,Huntington Bancshares,Sell,-3.00,9.07,-27.21,Financials
+7/18/2020,ANTM,Anthem,Sell,-4.00,266.37,"-1,065.48",Health Care
+7/21/2020,HCA,HCA Healthcare,Sell,-3.00,104.97,-314.91,Health Care
+7/22/2020,HSIC,Henry Schein,Sell,-3.00,67.66,-202.98,Health Care
+7/23/2020,INTU,Intuit Inc.,Sell,-3.00,296.44,-889.32,Information Technology
+7/24/2020,IPGP,IPG Photonics Corp.,Sell,-3.00,178.74,-536.22,Information Technology
+7/25/2020,AMGN,Amgen Inc.,Buy,3.00,247.98,743.94,Health Care
+7/28/2020,GILD,Gilead Sciences,Buy,1.00,74.54,74.54,Health Care
+7/29/2020,HCA,HCA Healthcare,Deposit,9.00,123.96,"1,115.64",Health Care
+30/7/2020,HSIC,Henry Schein,Deposit,7.00,68.71,480.97,Health Care
+31/7/2020,PFE,Pfizer Inc.,Deposit,1.00,36.76,36.76,Health Care
+1/8/2020,MDT,Medtronic plc,Deposit,8.00,96.48,771.84,Health Care
+4/8/2020,CFG,Citizens Financial Group,Buy,6.00,24.23,145.38,Financials
+5/8/2020,GS,Goldman Sachs Group,Buy,2.00,201.64,403.28,Financials
+6/8/2020,HIG,Hartford Financial Svc.Gp.,Deposit,8.00,42.03,336.24,Financials
+7/8/2020,HBAN,Huntington Bancshares,Buy,4.00,9.3,37.20,Financials
+8/8/2020,ICE,Intercontinental Exchange,Deposit,5.00,100.96,504.80,Financials
+8/11/2020,HIG,Hartford Financial Svc.Gp.,Buy,6.00,43.66,261.96,Financials
+8/12/2020,HBAN,Huntington Bancshares,Buy,9.00,10.09,90.81,Financials
+8/13/2020,ICE,Intercontinental Exchange,Buy,5.00,99.43,497.15,Financials
+8/14/2020,IVZ,Invesco Ltd.,Sell,-2.00,10.7,-21.40,Financials
+8/15/2020,JPM,JPMorgan Chase & Co.,Sell,-1.00,102.41,-102.41,Financials
+8/18/2020,ANTM,Anthem,Sell,-5.00,283.11,"-1,415.55",Health Care
+8/19/2020,BAX,Baxter International Inc.,Sell,-1.00,84.27,-84.27,Health Care
+8/20/2020,GILD,Gilead Sciences,Sell,-1.00,65.7,-65.70,Health Care
+8/21/2020,HCA,HCA Healthcare,Sell,-5.00,131.15,-655.75,Health Care
+8/22/2020,HSIC,Henry Schein,Sell,-2.00,66.15,-132.30,Health Care
+8/25/2020,AMD,Advanced Micro Devices Inc,Sell,-1.00,83.08,-83.08,Information Technology
+8/26/2020,AKAM,Akamai Technologies Inc,Sell,-4.00,111,-444.00,Information Technology
+8/27/2020,APH,Amphenol Corp,Sell,-2.00,109.05,-218.10,Information Technology
+28/8/2020,CDNS,Cadence Design Systems,Sell,-4.00,109.36,-437.44,Information Technology
+29/8/2020,CDW,CDW,Sell,-4.00,115.34,-461.36,Information Technology
+1/9/2020,IBM,International Business Machines,Sell,-5.00,123.31,-616.55,Information Technology
+2/9/2020,INTU,Intuit Inc.,Sell,-5.00,347.18,"-1,735.90",Information Technology
+3/9/2020,IPGP,IPG Photonics Corp.,Deposit,9.00,168.45,"1,516.05",Information Technology
+4/9/2020,AMD,Advanced Micro Devices Inc,Buy,4.00,82.54,330.16,Information Technology
+5/9/2020,AKAM,Akamai Technologies Inc,Buy,2.00,108.43,216.86,Information Technology
+9/9/2020,CSCO,Cisco Systems,Deposit,6.00,40,240.00,Information Technology
+10/9/2020,INTC,Intel Corp.,Deposit,5.00,49.62,248.10,Information Technology
+9/11/2020,IBM,International Business Machines,Deposit,9.00,120.56,"1,085.04",Information Technology
+9/12/2020,INTU,Intuit Inc.,Buy,6.00,315,"1,890.00",Information Technology
+9/15/2020,HBAN,Huntington Bancshares,Deposit,3.00,10.12,30.36,Financials
+9/16/2020,ICE,Intercontinental Exchange,Buy,3.00,100.53,301.59,Financials
+9/17/2020,IVZ,Invesco Ltd.,Deposit,8.00,10.89,87.12,Financials
+9/18/2020,JPM,JPMorgan Chase & Co.,Deposit,6.00,98.56,591.36,Financials
+9/19/2020,KEY,KeyCorp,Deposit,5.00,12.65,63.25,Financials
+9/22/2020,BAX,Baxter International Inc.,Buy,2.00,80.25,160.50,Health Care
+9/23/2020,GILD,Gilead Sciences,Deposit,10.00,63.4,634.00,Health Care
+9/24/2020,HCA,HCA Healthcare,Buy,8.00,116.33,930.64,Health Care
+9/25/2020,HSIC,Henry Schein,Deposit,5.00,58.28,291.40,Health Care
+9/26/2020,PFE,Pfizer Inc.,Deposit,4.00,34.2,136.80,Health Care
+29/9/2020,AKAM,Akamai Technologies Inc,Buy,10.00,110.97,"1,109.70",Information Technology
+30/9/2020,APH,Amphenol Corp,Buy,2.00,108.63,217.26,Information Technology
+1/10/2020,CDNS,Cadence Design Systems,Deposit,6.00,106.63,639.78,Information Technology
+2/10/2020,CDW,CDW,Buy,5.00,123.5,617.50,Information Technology
+3/10/2020,CSCO,Cisco Systems,Deposit,3.00,38.27,114.81,Information Technology
+6/10/2020,INTU,Intuit Inc.,Buy,4.00,331.36,"1,325.44",Information Technology
+7/10/2020,IPGP,IPG Photonics Corp.,Buy,4.00,173.97,695.88,Information Technology
+8/10/2020,AMGN,Amgen Inc.,Buy,3.00,257.67,773.01,Health Care
+10/9/2020,ANTM,Anthem,Deposit,10.00,293.29,"2,932.90",Health Care
+10/10/2020,BAX,Baxter International Inc.,Buy,7.00,78.5,549.50,Health Care
+10/13/2020,HSIC,Henry Schein,Deposit,5.00,59.89,299.45,Health Care
+10/14/2020,PFE,Pfizer Inc.,Buy,5.00,35.01,175.05,Health Care
+10/15/2020,MDT,Medtronic plc,Buy,10.00,107.56,"1,075.60",Health Care
+10/16/2020,CINF,Cincinnati Financial,Buy,2.00,78.82,157.64,Financials
+10/17/2020,C,Citigroup Inc.,Deposit,2.00,43.19,86.38,Financials
+10/20/2020,HIG,Hartford Financial Svc.Gp.,Deposit,5.00,37.19,185.95,Financials
+10/21/2020,HBAN,Huntington Bancshares,Deposit,2.00,9.88,19.76,Financials
+10/22/2020,ICE,Intercontinental Exchange,Buy,5.00,99.47,497.35,Financials
+10/23/2020,IVZ,Invesco Ltd.,Buy,4.00,14.05,56.20,Financials
+10/24/2020,JPM,JPMorgan Chase & Co.,Buy,5.00,103.81,519.05,Financials
+10/27/2020,AKAM,Akamai Technologies Inc,Deposit,5.00,106.06,530.30,Information Technology
+10/28/2020,APH,Amphenol Corp,Deposit,8.00,115.05,920.40,Information Technology
+10/29/2020,CDNS,Cadence Design Systems,Deposit,7.00,107.64,753.48,Information Technology
+30/10/2020,CDW,CDW,Buy,4.00,120.95,483.80,Information Technology
+31/10/2020,CSCO,Cisco Systems,Buy,3.00,35.9,107.70,Information Technology
+3/11/2020,INTU,Intuit Inc.,Buy,8.00,316.42,"2,531.36",Information Technology
+4/11/2020,IPGP,IPG Photonics Corp.,Deposit,10.00,194.97,"1,949.70",Information Technology
+5/11/2020,AMGN,Amgen Inc.,Deposit,9.00,230.33,"2,072.97",Health Care
+6/11/2020,ANTM,Anthem,Deposit,3.00,319.6,958.80,Health Care
+7/11/2020,BAX,Baxter International Inc.,Buy,9.00,78.93,710.37,Health Care
+10/11/2020,HSIC,Henry Schein,Deposit,8.00,68,544.00,Health Care
+11/11/2020,PFE,Pfizer Inc.,Buy,8.00,36.7,293.60,Health Care
+11/12/2020,MDT,Medtronic plc,Deposit,4.00,110.24,440.96,Health Care
+11/13/2020,CINF,Cincinnati Financial,Deposit,7.00,82.99,580.93,Financials
+11/14/2020,C,Citigroup Inc.,Deposit,5.00,48.66,243.30,Financials
+11/17/2020,HIG,Hartford Financial Svc.Gp.,Buy,7.00,46.34,324.38,Financials
+11/18/2020,HBAN,Huntington Bancshares,Deposit,2.00,12.02,24.04,Financials
+11/19/2020,ICE,Intercontinental Exchange,Buy,6.00,99.46,596.76,Financials
+11/20/2020,IVZ,Invesco Ltd.,Deposit,5.00,15.96,79.80,Financials
+11/21/2020,JPM,JPMorgan Chase & Co.,Deposit,5.00,114.57,572.85,Financials
+11/24/2020,AKAM,Akamai Technologies Inc,Buy,5.00,102.81,514.05,Information Technology
+11/25/2020,APH,Amphenol Corp,Buy,2.00,131.25,262.50,Information Technology
+26/11/2020,CDNS,Cadence Design Systems,Deposit,7.00,113.04,791.28,Information Technology
+28/11/2020,CSCO,Cisco Systems,Deposit,8.00,42.7,341.60,Information Technology
+1/12/2020,INTU,Intuit Inc.,Buy,4.00,352.02,"1,408.08",Information Technology
+2/12/2020,IPGP,IPG Photonics Corp.,Buy,4.00,207.88,831.52,Information Technology
+3/12/2020,AMGN,Amgen Inc.,Buy,10.00,226.56,"2,265.60",Health Care
+4/12/2020,ANTM,Anthem,Deposit,6.00,323.03,"1,938.18",Health Care
+5/12/2020,BAX,Baxter International Inc.,Buy,4.00,78,312.00,Health Care
+8/12/2020,HSIC,Henry Schein,Deposit,6.00,68.73,412.38,Health Care
+9/12/2020,PFE,Pfizer Inc.,Buy,7.00,42.56,297.92,Health Care
+10/12/2020,MDT,Medtronic plc,Buy,1.00,112.95,112.95,Health Care
+12/11/2020,CINF,Cincinnati Financial,Buy,2.00,80.97,161.94,Financials
+12/12/2020,C,Citigroup Inc.,Deposit,1.00,58.93,58.93,Financials
+12/15/2020,HIG,Hartford Financial Svc.Gp.,Deposit,8.00,45.54,364.32,Financials
+12/16/2020,HBAN,Huntington Bancshares,Deposit,5.00,12.59,62.95,Financials
+12/17/2020,ICE,Intercontinental Exchange,Buy,2.00,111.31,222.62,Financials
+12/18/2020,IVZ,Invesco Ltd.,Buy,3.00,17.48,52.44,Financials
+12/19/2020,JPM,JPMorgan Chase & Co.,Buy,5.00,119.08,595.40,Financials
+12/22/2020,ANTM,Anthem,Deposit,1.00,306.38,306.38,Health Care
+12/23/2020,BAX,Baxter International Inc.,Deposit,1.00,78.66,78.66,Health Care
+12/24/2020,GILD,Gilead Sciences,Deposit,3.00,57.38,172.14,Health Care
+12/25/2020,HCA,HCA Healthcare,Buy,3.00,164.24,492.72,Health Care
+12/29/2020,CINF,Cincinnati Financial,Buy,9.00,87.37,786.33,Financials
+30/12/2020,C,Citigroup Inc.,Deposit,1.00,60.91,60.91,Financials
+31/12/2020,CFG,Citizens Financial Group,Deposit,5.00,35.4,177.00,Financials
+1/1/2021,GS,Goldman Sachs Group,Deposit,9.00,263.71,"2,373.39",Financials
+5/1/2021,IVZ,Invesco Ltd.,Deposit,10.00,16.95,169.50,Financials
+6/1/2021,JPM,JPMorgan Chase & Co.,Buy,5.00,125.65,628.25,Financials
+7/1/2021,KEY,KeyCorp,Deposit,2.00,18.16,36.32,Financials
+8/1/2021,AMGN,Amgen Inc.,Sell,-5.00,234.02,"-1,170.10",Health Care
+1/9/2021,ANTM,Anthem,Sell,-1.00,337.08,-337.08,Health Care
+1/12/2021,HCA,HCA Healthcare,Sell,-5.00,171.37,-856.85,Health Care
+1/13/2021,HSIC,Henry Schein,Sell,-3.00,73.79,-221.37,Health Care
+1/14/2021,PFE,Pfizer Inc.,Sell,-5.00,36.86,-184.30,Health Care
+1/15/2021,MDT,Medtronic plc,Sell,-3.00,117.77,-353.31,Health Care
+1/16/2021,CINF,Cincinnati Financial,Sell,-1.00,93.7,-93.70,Financials
+1/20/2021,HIG,Hartford Financial Svc.Gp.,Sell,-5.00,52.66,-263.30,Financials
+1/21/2021,HBAN,Huntington Bancshares,Sell,-5.00,14.68,-73.40,Financials
+1/22/2021,ICE,Intercontinental Exchange,Sell,-4.00,112.92,-451.68,Financials
+1/23/2021,IVZ,Invesco Ltd.,Sell,-3.00,20.97,-62.91,Financials

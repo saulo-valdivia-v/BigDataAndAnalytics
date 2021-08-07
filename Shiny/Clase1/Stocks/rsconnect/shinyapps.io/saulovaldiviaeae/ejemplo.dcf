@@ -1,0 +1,10 @@
+name: ejemplo
+title: Ejemplo
+username:
+account: saulovaldiviaeae
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3646993
+bundleId: 4231319
+url: https://saulovaldiviaeae.shinyapps.io/ejemplo/
+when: 1613503539.74828
