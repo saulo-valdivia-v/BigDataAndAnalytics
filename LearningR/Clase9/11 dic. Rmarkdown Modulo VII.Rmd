@@ -1,0 +1,217 @@
+---
+title: "Prueba RMarkdown"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+## Qué es RMarkdown
+
+Herramienta para generar documentos con el código de R.
+Beneficios: permite ver el código (reproducibilidad) seguido de lo que genera ese código (informativo).
+
+Aquí vamos a meter el texto que queramos que aparezca en nuestro documento.
+
+Para poner cursiva: _text_ or *text*.
+
+Para poner negrita: **text**. 
+
+Para subindices: H~3~PO~4~ 
+
+Para superindices: Cu^2+^
+
+Para poner hiperlinks [texto que queremos que sea hiperlink](link): [RStudio](https://www.rstudio.com). 
+
+# Asi vamos a poner los títulos
+## Asi vamos a poner los títulos
+### Asi vamos a poner los títulos
+
+## Listas en el texto
+- one item
+* one item
++ one item
+    * one more item
+    + one more item
+    - one more item
+    
+## Espacios en el texto
+Si no ponemos espacios, la siguiente linea
+# la toma como parte de la anterior
+
+Si ponemos espacios, la siguiente linea
+
+# la toma aparte y como lleva # sera un titulo
+
+Lo mismo ocurre aquí:
+
+La resta de 5
+-3 es 2.
+
+La resta de 5
+
+-3 es 2.
+
+¿Qué está pasando?
+
+## Expresiones matemáticas
+
+Se imprimen entre símbolos de dolar y usando la sintaxis LaTeX
+(sistema de composición de textos)
+
+$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$
+
+Diferencia ente usar uno o dos símbolos de dolar
+
+$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$
+$\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{array}$
+
+$X = \begin{bmatrix}1 & x_{1}\\
+1 & x_{2}\\
+1 & x_{3}
+\end{bmatrix}$
+
+
+### Código del Script
+
+El documento se va a dividir en 'chunks' o partes generadas en 'Insert'.
+Los chunks empiezan y terminan con comillas.
+
+```{r}
+#En estos chunks vamos a meter el codigo que queramos ejecutar.
+```
+
+## Objetos
+Mirad la diferencia entre estos tres chunks
+```{r}
+x <- 9
+```
+
+```{r}
+x <- 9
+x
+```
+
+```{r, results = 'hide'}
+x <- 9
+x
+```
+
+```{r}
+x<- 9 
+#(click Run)
+```
+
+## Instrucciones del chunk
+
+```{r,include=FALSE}
+#Dentro de las llaves metemos: 
+#lenguaje que estamos utilizando (tambien permite usar Phyton o SQL)
+
+#instrucciones generales que van a controlar el chunk
+#por ejemplo, indlude= F sirve para que no imprima el codigo
+```
+
+```{r,include=FALSE}
+#las instrucciones del chunk tambien pueden ser expresiones creadas con el codigo:
+do_it <- Sys.Date() > '2020-02-10'
+```
+
+```{r, eval=do_it}
+x <- rnorm(100);x
+```
+
+```{r,include=FALSE}
+do_not_do_it <- Sys.Date() > '2020-12-22'
+```
+
+```{r,eval=do_not_do_it}
+x <- rnorm(100);x
+```
+
+Para ver las opciones que ofrecen los chunks: [Opciones de la herramienta knitr](https://yihui.name/knitr/options).
+
+
+## Gráficos
+
+Podemos añadir gráficos en el documento:
+
+```{r}
+plot(pressure)
+```
+
+```{r, echo=FALSE}
+plot(pressure)
+#con echo=F le indicamos que no salga el codigo de este chunk, solo el resultado
+```
+
+```{r,fig.height = 4}
+plot(pressure)
+```
+
+```{r, fig.pos = 'h'}
+plot(pressure)
+#h	= poner grafico en la posicion donde aparece en el script 
+#t	=en el top de la pagina
+#b	= en el bottom de la pagina
+#p	= Put on a special page for floats only.
+```
+
+```{r, fig.show='hold', out.width='25%'}
+#poner graficos uno al lado del otro
+#CUIDADO con el tamaño: si son muy grandes no os lo va a poner al lado
+plot(cars)
+plot(pressure)
+```
+
+## Tablas
+```{r}
+library(knitr)
+
+kable(cars, caption = 'Título de la tabla',
+      col.names= c("Velocidad","Distancia"))
+#puede crear tablas HTML, PDF and Word outputs
+
+#le podemos indicar el formato de los decimales y los miles
+a<- seq(from = 10, to = 13, length.out = 5)
+b<-seq(from = 1000, to = 13000, length.out = 5)
+y <- data.frame(a,b)
+kable(y,format.args = list(decimal.mark = ",", big.mark = "'"))
+
+#podemos juntar dos tablas
+d1 = head(iris)
+d2 = head(mtcars)
+kable(list(d1, d2), caption = "Dos tablas juntas")
+
+
+```
+
+```{r}
+#Otras opciones para mostrar data.frames:
+#print.data.frame es el metodo por defecto
+#kable, knitr::kable function
+#tibble, tibble::print.tbl_df function
+#paged, rmarkdown::paged_table permite que la tabla ocupe mas de una pagina
+```
+
+## Generar el documento
+
+Cuando tengamos nuestro documento completo, le damos a Knit para generarlo. 
+```{r}
+#OTRA FORMA:
+
+#library(rmarkdown)
+#rmarkdown::render('Rmarkdown.Rmd', 'word_document')
+#rmarkdown::render('Rmarkdown.Rmd', 'html_document')
+#rmarkdown::render('Rmarkdown.Rmd', 'pdf_document')
+```
+
+```{r}
+#Markdown se desarrollo primero para HTML
+#por lo que ofrece mas posibilidades 
+#y los demas formatos tienen muchas cosas en comun
+```
+
+

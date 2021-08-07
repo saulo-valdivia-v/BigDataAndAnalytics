@@ -1,0 +1,107 @@
+---
+title: "Modulo VII_Ejercicios"
+author: "Me"
+date: "12/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Modulo VII - Ejercicios
+
+### Haz un analisis que ponga a prueba si la fluidez verbal en español puede predecir la fluidez verbal en ingles
+- Cargando los datos:
+```{r cars}
+library(ggplot2)
+library(psych)
+
+encuesta <- read.table("encuesta.dat", header=T, sep="\t",dec=',')
+```
+
+- Revisando datos
+
+Usamos un scatter plot para intentar encontrar una relacion entre las variables.
+A simple vista no se puede encontrar una correlacion significativa. A continuacion se realiza
+una prueba de los supuestos.
+```{r pressure, echo=FALSE}
+
+plot(encuesta$FluidezVerbalIngles~encuesta$FluidezVerbalEspanol)
+```
+Trazamos una recta de regresion donde se puede ver una posible relacion entre las variables
+
+```{r pressure2, echo=FALSE}
+dispersion <-ggplot(encuesta, aes(FluidezVerbalEspanol, FluidezVerbalIngles))
+
+dispersion+
+  geom_point()+
+  geom_smooth(method = "lm")+
+  labs(x = "Fluidez Verbal en Espa?ol", y = "Fluidez Verbal en Ingles",
+       title="Recta de regresion de fluidez verbal en ingl?s sobre la fluidez verbal en espa?ol")
+```
+
+- Comprobando los supuestos
+Empezamos la comprobacion de los supuestos.
+
+```{r}
+plot(encuesta$FluidezVerbalIngles,encuesta$FluidezVerbalEspanol)
+cor.test(encuesta$FluidezVerbalIngles,encuesta$FluidezVerbalEspanol)
+
+#manualmente:
+Y <- 1.09690 + 0.28931 * 12; Y
+
+#con la funcion fitted
+modelo <- lm(encuesta$FluidezVerbalIngles~encuesta$FluidezVerbalEspanol)
+
+modelo$fitted.values #valores estimados de fluidez ingles para cada persona 
+#en base a los valores de fluidez en espa?ol
+modelo$residuals#diferencia entre los valores estimados en fluidez ingles
+#y los observados
+```
+
+- Linealidad. Se realiza la prueba de Correlacion de Pearson. Se puede ver un indice de correlacion
+mayor a 0. Por lo que se puede concluir que existe una correlacion minima pero no significativa.
+
+```{r}
+
+#1.4. Comprueba los supuestos
+##LINEALIDAD
+plot(encuesta$FluidezVerbalIngles,encuesta$FluidezVerbalEspanol)
+cor.test(encuesta$FluidezVerbalIngles,encuesta$FluidezVerbalEspanol)
+```
+
+- Normalidad. En los graficos se puede ver que la variable se ajusta relativamente bien a la curva.
+Sin embargo al aplicar el test de Kolmogorov, este rechaza la normalidad.
+```{r}
+##NORMALIDAD
+
+hist(modelo$residuals)
+
+boxplot(modelo$residuals)#mirar centro (mediana);
+#dispersi?n (bigote); 
+#casos at?picos o extremos
+
+qqnorm(modelo$residuals, main="Q-Q plot de los residuos del modelo");qqline(modelo$residuals,distribution = qnorm)
+
+describe(modelo$residuals)#asimetria <2 y curtosis <7
+
+ks.test(modelo$residuals, "pnorm")
+shapiro.test(modelo$residuals)#con muestras menores a 50
+```
+- Homocedasticidad. Dispersion de los pronosticos en base a los residuos la nube de puntos no queda aclaro que esta distribuida homogeneamente.
+```{r}
+##HOMOCEDASTICIDAD
+plot(fitted(modelo),resid(modelo))
+```
+
+- Independencia. El Test de Durbin Watson arroja una relacion mayor a 0 pero menor a 1. No queda clara una relacion significante de independencia.
+
+$Y = B_0 + B_1 * X$
+```{r}
+##INDEPENDENCIA
+plot(encuesta$FluidezVerbalIngles,resid(modelo))
+#los residuos no estan aleatoriamente repartidos
+library(lmtest)
+dwtest(modelo)#Durbin-Watson debe estar entre 1.5-2.5
+```
