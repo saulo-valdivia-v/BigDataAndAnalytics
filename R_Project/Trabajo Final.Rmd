@@ -1,0 +1,376 @@
+---
+title: "Trabajo Final Business Performance Analysis"
+author: "Roman Katz, Marité Ludoweig, Saulo Valdivia, Eva Suárez"
+date: "12/3/2020"
+output:
+  html_document: default
+  word_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,  warning = FALSE)
+
+# Importando las librerias/paquetes que vamos a utilizar
+library(tidyverse)
+library(ggthemes)
+library(psych)
+library(DescTools)
+```
+### Ejercicio 1:
+Importar bases de datos en R y hacer las comprobaciones pertinentes. 
+Importante describir y explicar cada paso en el Script.
+
+```{r, echo=FALSE}
+# Importando datos del archivo de compradores en formato csv
+data <- read.csv('Dataset_Compradores.csv',header = T)
+
+# Revisando la estructura de las columnas del dataframe
+str(data)
+summary(data)
+length(data) #14 columnas
+dim(data) 
+
+# Eliminando columnas que no son relevantes
+data$RowNumber<- NULL
+data$Exited<- NULL
+```
+En el código anterior hemos cargado la base de datos y realizamos una primera aproximacion a los datos contenidos a través de diferentes comandos para ver la estructura y forma de los datos.
+
+A partir de los comandos realizados pudimos observar 3 columnas tipo cáracter relacionadas con apellidos, país de procedencia y género; el resto de las columnas son de tipo cuantitativo.
+
+Con la funcion summary, pudimos visualizar algunos parámetros principales, como son el rango de edades de nuestro dataset, el rango en el salario estimado y el credit score. También, de todas las variables cuantitativas pudimos observar los cuartiles, su media y su mediana.
+
+Con las funciones Length y DIM, pudimos obtener las dimensiones de nuestros datos. 
+
+Y por último, eliminamos la columna 'Row Number' que contenía los índices y no proveía información relevante para el análisis.
+
+### Ejercicio 2:
+Describir de manera gráfica y estadística las variables de la base de datos. Importante explicar la eleccion de los graficos, así como lo que se observa en los descriptivos estadisticos.
+*Puntos importantes: tendencia central, dispersion, forma de la distribucion (normalidad), valores perdidos, valores extremos
+
+## BARRAS
+A partir de la base de datos de 10000 observaciones, hemos realizado distintos gráficos para cada una de las variables, iniciando con los gráficos de barras para las variables categóricas. Luego se han realizado histogramas para aquellas variables cuantitativas.
+
+### Gráfico Barras – Geografía y Género
+Iniciamos observando la variable geografía donde pudimos concluir que la data está concentrada en tres países siendo Francia con 5,014, el que lidera la cantidad de datos, luego Alemania con 2,509 y finalmente España con 2,477, siendo estos dos últimos muy similares. 
+Tomando el gráfico anterior, quisimos observar la distribución por genero en cada país, para poder tener mayores detalles de éste, hemos realizado una relación entre la cantidad de hombre y mujeres donde vemos la tendencia en los tres países frente a la tendencia global, concluyendo lo siguiente: 
+-	Hay más hombres que mujeres, teniendo un ratio de 0.83 a nivel global.
+-	El conteo de Francia es la muestra principal ya que tiene mayor cantidad de datos y por lo tanto su ratio toma mayor importancia en el promedio global.
+-	Alemania, es el país que más se acerca a una relacion 1:1, ya que resulto tener un ratio de 0.906.
+-	España es el país con mayor diferencia entre hombres y mujeres, siendo éste 0.78.
+
+```{r, echo=FALSE}
+# Clasificando los datos de las columnas Geography y Gender
+table(data$Geography)
+by(data$NumOfProducts,data$Gender,describe)
+by(data$NumOfProducts,data$Geography,describe)
+
+# Generando una grafica de Distribucion Geografica
+p <- ggplot(data)
+p+geom_bar(mapping =aes(x=Geography,fill = Geography))+theme_minimal()+labs(title='Distribucion Geografica',y='Cantidad de Observaciones',x='Geografia')+scale_fill_manual(values=c('yellow2','royalblue3', 'yellowgreen'))
+
+# Generando una grafica de Distribucion por Genero
+p+geom_bar(mapping =aes(Gender,fill=Gender))+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Distribución de Género',y='Cantidad de Observaciones',x='Género')+scale_fill_manual(values=c('steelblue2','tomato2'))
+
+# Generando una grafica de Distribucion Geografica por Genero
+p+geom_bar(mapping =aes(Geography,fill=Gender),position = 'dodge')+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Distribucion Geografica por genero',y='Cantidad de Observaciones',x='Geografia')+scale_fill_manual(values=c('steelblue2','tomato2'))
+
+# Aplicando filtros para generar un Ratio de Genero en los diferentes Paises
+hombres <- filter(data, data$Gender=='Male')
+mujeres <- filter(data, data$Gender=='Female')
+hombres_francia <- filter(hombres,hombres$Geography=='France') 
+hombres_Spain <- filter(hombres,hombres$Geography=='Spain')
+hombres_Germany <- filter(hombres,hombres$Geography=='Germany')
+mujeres_francia <- filter(mujeres,mujeres$Geography=='France') 
+mujeres_Spain <- filter(mujeres,mujeres$Geography=='Spain')
+mujeres_Germany <- filter(mujeres,mujeres$Geography=='Germany')
+
+# Generando un dataframe que muestra el Ratio Global por Genero
+ratio_global<- data.frame(c(count(mujeres)/count(hombres),count(mujeres_francia)/count(hombres_francia),count(mujeres_Spain)/count(hombres_Spain),count(mujeres_Germany)/count(hombres_Germany)))
+ratio_global <-rename(ratio_global,'Global'=n,'France'=n.1,'Spain'=n.2,'Germany'=n.3)
+ratio_global
+```
+
+### Gráfico de Barras – Number of Products y Género. 
+
+En este gráfico, podemos conocer la tendencia de la cantidad de productos que tiene cada cliente donde la media es 1.53 productos con una sd de 0.58; por lo tanto, se puede decir que la mayoría de la población cuenta con 1 y 2 productos.
+
+A partir de esta conclusión, observamos que el número de hombres que poseen 1 o 2 productos es mayor que el de mujeres; sin embargo, conforme aumenta el número de productos (a partir de tres) la tendencia se invierte ligeramente (considerando únicamente la muestra que estamos analizando). 
+
+```{r, echo=FALSE}
+# Listando algunos estadisticos para la columna de Cantidad de Productos (NumOfProducts)
+describe(data$NumOfProducts)
+
+# Generando un grafico que muestra la Cantidad de Productos y sus observaciones
+p+geom_bar(mapping = aes(NumOfProducts),fill='darkorange2')+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Cantidad de productos',y='Cantidad de Observaciones',x='Cantidad de Productos')
+
+# Generando un grafico que muestra la Cantidad de Productos clasificadas por Genero
+p+geom_bar(mapping = aes(NumOfProducts,fill=Gender),position = 'dodge')+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Cantidad de productos por Genero',y='Cantidad de Observaciones',x='Cantidad de Productos')+scale_fill_manual(values=c('steelblue2','tomato2'))
+```
+
+### Gráfico de Barras – Active Members
+
+Del total de nuestra base de observables, podemos detectar que hay un gran numero de personas inactivas, analizando la variable, obtuvimos que la media es 0.52, siendo mayor el numero de personas con status activo. 
+
+Si lo vemos por geografía, podemos observar que están distribuidos similarmente en relación a la tendencia general de los 3 países.
+
+```{r, echo=FALSE}
+# Convirtiendo la columna IsActiveMember en un factor
+data2 <- data
+ActMember <- factor(data$IsActiveMember,levels = c(0,1),labels = c('Inactivo','Activo'))
+data2['IsActiveMember'] <- ActMember
+p <- ggplot(data)
+
+# Generando un grafico que muestra la cantidad de Miembros Activos e Inactivos
+p2 <- ggplot(data2)
+p2+geom_bar(mapping = aes(IsActiveMember, fill=ActMember))+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Miembros Activos/Inactivos',y='Cantidad de Observaciones',x='Activos/Inactivos')+scale_fill_manual(values=c('tomato2','steelblue2'))
+
+# Generando un grafico que muestra la cantidad de Miembros Activos e Inactivos por distribucion Geografica
+p2+geom_bar(mapping = aes(IsActiveMember,fill=Geography),position = 'dodge')+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Miembros Activos/Inactivos \ncon Distribucion Geografica',y='Cantidad de Observaciones',x='Activos/Inactivos')+scale_fill_manual(values=c('yellow2','royalblue3', 'yellowgreen'))
+```
+
+### Gráfico de Barras – Tenure
+
+```{r, echo=FALSE}
+# Generando un grafico que muestra el Tiempo en meses por pagar(Tenure) y sus observaciones
+p+geom_bar(mapping =aes(Tenure),fill='darkorange2')+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))
+
+# Generando un grafico que muestra el Tiempo en meses por pagar(Tenure) clasificado por Genero
+p+geom_bar(mapping =aes(Tenure,fill=Gender),position = 'dodge')+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Tenure',y='Nº Personas',x='Tiempo en meses por pagar el producto')+scale_fill_manual(values=c('brown1','steelblue2'))
+```
+
+## Histogramas
+### Gráfico de Histogramas – Credit Score
+
+La media de Credit Score es 650 puntos, con un mínimo de 350 y máximo de 850; la media y desviación nos indica que la mayoría de la población está entre 550 y 750 puntos. Comparando el gráfico con una curva de distribución normal podemos observar que, en torno a la media de Credit Score, se distribuyen los datos como una normal.
+
+```{r, echo=FALSE}
+# Generando un grafico de Histograma donde se solapan los datos de la columna CreditScore y la distribucion Normal.
+p2 <-ggplot(data2)
+p2+geom_histogram(mapping = aes(CreditScore,y=..density..),fill='lightgreen', binwidth=15, alpha=0.8)+stat_function(fun = dnorm, args = list(mean=mean(data2$CreditScore), sd =sd(data2$CreditScore)))+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Histograma Credit Score')
+
+# Revisando estadiscos de la columna CreditScore
+describe(data$CreditScore)
+```
+### Gráfico de Histogramas – Age
+
+La edad promedio de la poblacion es de 39 años, con rango de edades comprendido entre 18 a 92 años.
+Esta distribución de edades no se ajusta a la de una normal, pues tiene un sesgo hacia la derecha con una cola de datos que se separan de la media más que la cola de la izquierda.
+
+```{r, echo=FALSE}
+# Generando un grafico de Histograma donde se solapan los datos de la columna Age y la distribucion Normal.
+p2+geom_histogram(mapping = aes(Age,y=..density..),fill='lightgreen',  binwidth=5, alpha=0.8)+stat_function(fun = dnorm, args = list(mean=mean(data2$Age), sd =sd(data2$Age))) +theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Histograma Age')
+
+# Revisando estadiscos de la columna Age
+describe(data$Age)
+```
+### Gráfico de Histogramas – Balance
+
+Con la variable Balance Score, hemos detectado que hay una gran cantidad de personas con un balance 0, lo que significa que no están debiendo dinero, lo cual podría distorsionar los datos de los deudores. Se observa que entre la media y la mediana existe una diferencia considerable, siendo éstas aprox 76,500 y 97,200 respectivamente. 
+
+Generalmente no debemos excluir dichos datos, sin embargo, en este análisis, debemos enfocarnos en los deudores para poder formar una idea real de la deuda que esperamos recibir de vuelta. En este caso, los resultados indican que la deuda promedio de cada persona es de 119,800 lo cual sigue una distribución normal, basados en que la media y la mediana son iguales. 
+
+```{r, echo=FALSE}
+# Aplicando un filtro para obtener las filas con Balance positivo
+data_balance <-filter(data2,Balance != 0)
+
+# Generando un grafico de Histograma donde se solapan los datos de la columna Balance y la distribucion Normal.
+p2+geom_histogram(mapping = aes(Balance,y=..density..),fill='lightgreen',alpha=0.8)+stat_function(fun = dnorm, args = list(mean=mean(data2$Balance), sd =sd(data2$Balance))) +theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Histograma Balance')
+
+# Revisando estadiscos de la columna Balance
+describe(data2$Balance)
+
+# Generando un grafico de Histograma donde se solapan los datos de la columna Balance con el filtro aplicado y la distribucion Normal.
+p3 <-ggplot(data_balance)
+p3+geom_histogram(mapping = aes(Balance,y=..density..),fill='lightgreen',alpha=0.8)+stat_function(fun = dnorm, args = list(mean=mean(data_balance$Balance), sd=sd(data_balance$Balance)))+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Histograma Balance distinto de 0')
+
+# Revisando estadiscos de la columna Balance con el filtro aplicado
+describe(data_balance$Balance)
+```
+
+### Gráfico de Histogramas – EstimatedSalary
+Podemos observar que los sueldos siguen una distribución uniforme entre 0 y 200,000 euros, siendo el sueldo promedio de 100,000 euros con una sd de 57,500.
+```{r, echo=FALSE}
+# Generando un grafico de Histograma donde se solapan los datos de la columna EstimatedSalary y la distribucion Normal.
+p2+geom_histogram(mapping = aes(EstimatedSalary,y=..density..),fill='lightgreen',alpha=0.8)+stat_function(fun = dnorm, args = list(mean=mean(data2$EstimatedSalary), sd=sd(data2$EstimatedSalary)))+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+ labs(title='Histograma EstimatedSalary')
+
+# Revisando estadiscos de la columna EstimatedSalary
+describe(data$EstimatedSalary)
+
+# Generando un grafico de Histograma que muestra la columna EstimatedSalary y sus observaciones.
+p2+geom_histogram(mapping = aes(EstimatedSalary),fill='lightgreen',alpha=0.8)+stat_function(fun = dnorm)+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"))+labs(title='Histograma EstimatedSalary')
+```
+
+
+## BoxPlots
+### Boxplot: Credit Score - Geografia y Genero
+Se observa que tanto las medianas como el rango intercuatilico para todos los paises y ambos generos es similar, y se pueden ver algunos Outliers en la zona inferior.
+
+
+```{r, echo=FALSE}
+# Generando un grafico Boxplot para las columnas CreditScore y Geography clasificadas por Genero.
+p2+geom_boxplot(mapping = aes(x=Geography,y=CreditScore,fill=Gender),alpha=0.8)+stat_function(fun = dnorm)+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"),axis.line.y=element_line(colour="black",size=0.2),
+        axis.line.x=element_line(colour="black",size=0.2))+labs(title='CreditScore \nsegun Geografia y Genero',y='Credit Score',x='Geografia')+scale_fill_manual(values=c('brown1','steelblue2'))
+
+# Revisando informacion sobre la media, mediana y los cuartiles por Genero
+by(hombres$CreditScore,hombres$Geography,summary)
+by(mujeres$CreditScore,mujeres$Geography,summary)
+```
+
+### Boxplot: Edad - Geografia y Genero
+En este caso se observan las medianas tambien son similares entre si para ambos generos, pero que existen una cantidad importante de outliers en la zona superior del grafico, lo que muestra que aunque los datos en su mayoria se acumulan entre los 25 y 50 anos (aprox), existe una dispersion observable.
+```{r, echo=FALSE}
+# Generando un grafico Boxplot para las columnas Age y Geography clasificadas por Genero.
+p2+geom_boxplot(mapping = aes(x=Geography,y=Age,fill=Gender),alpha=0.8)+stat_function(fun = dnorm)+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"),axis.line.y=element_line(colour="black",size=0.2),
+        axis.line.x=element_line(colour="black",size=0.2))+labs(title='Edad \nsegun Geografia y Genero',y='Edad',x='Geografia')+scale_fill_manual(values=c('brown1','steelblue2'))
+
+# Revisando informacion sobre la media, mediana y los cuartiles por Genero
+by(hombres$Age,hombres$Geography,summary)
+by(mujeres$Age,mujeres$Geography,summary)
+```
+
+### Boxplot: Balance - Geografia y Genero
+Podemos observar que para los casos de Espana y Francia la cantidad de balances en cero es tan importante que desplaza los boxplots hacia el cero, aunque el rango intercuartilico muestra una gran amplitud lo que significa que hay una gran dispersion de los datos. Por el contrario, en el caso de Alemania, se puede ver que  los datos se concentran alrededor de la mediana con un rango intercuartilico mas acotado.
+
+
+```{r, echo=FALSE}
+# Generando un grafico Boxplot para las columnas Balance y Geography clasificadas por Genero.
+p2+geom_boxplot(mapping = aes(x=Geography,y=Balance,fill=Gender),alpha=0.8)+stat_function(fun = dnorm)+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"),axis.line.y=element_line(colour="black",size=0.2),
+        axis.line.x=element_line(colour="black",size=0.2))+labs(title='Balance \nsegun Geografia y Genero',y='Balance',x='Geografia')+scale_fill_manual(values=c('brown1','steelblue2'))
+
+# Revisando informacion sobre la media, mediana y los cuartiles por Genero
+by(hombres$Balance,hombres$Geography,summary)
+by(mujeres$Balance,mujeres$Geography,summary)
+```
+### Boxplot: Salario Estimado - Geografia y Genero
+Nuevamente en este grafico se observa una distribucion pareja de los datos, es decir, en todos los casos los datos se distribuyen practicamente de forma homogenea alrededor de la mediana con un rango intercuartilico amplio y con bigotes entre los maximos y minimos de cada uno de los datos, y gracias a esta distribucion no se observan Outliers en el grafico.
+
+```{r, echo=FALSE}
+# Generando un grafico Boxplot para las columnas EstimatedSalary y Geography clasificadas por Genero.
+p2+geom_boxplot(mapping = aes(x=Geography,y=EstimatedSalary,fill=Gender),alpha=0.8)+stat_function(fun = dnorm)+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"),axis.line.y=element_line(colour="black",size=0.2),
+        axis.line.x=element_line(colour="black",size=0.2))+labs(title='Salario Estimado \nsegun Geografia y Genero',y='Salario Estimado',x='Geografia')+scale_fill_manual(values=c('brown1','steelblue2'))
+
+# Revisando informacion sobre la media, mediana y los cuartiles por Genero
+by(hombres$EstimatedSalary,hombres$Geography,summary)
+by(mujeres$EstimatedSalary,mujeres$Geography,summary)
+```
+
+
+
+3) Llevar a cabo un analisis estadistico en R y saber interpretar los resultados. 
+
+ Para dicho analisis, el alumno/a podra elegir entre las dos siguientes opciones:
+ a) Realizar un analisis de comparacion, siendo la hipotesis inicial:
+    "el salario de los consumidores es igual en los diferentes paises donde se han recogido los datos" 
+ b) Realizar un analisis de relacion, siendo la hipotesis inicial:
+    "la edad predice la solvencia (credit score) de los consumidores"
+ opcional: en cualquiera de las elecciones se podra incluir covariables para realizar un analisis 
+ mas completo (justificar la eleccion e incluir en la interpretacion de los resultados)
+Pautas para el analisis:
+
+* ¿Cual es la hipotesis nula y la hipotesis alternativa?
+* ¿Que analisis es correcto para testar dicha hipotesis? ¿Por qué?
+* Mostrar los resultados y representarlos graficamente
+* Interpretar los resultados
+* Sacar conclusiones en base a los resultados obtenidos y en relacion con la hipotesis inicial.
+
+### Opcion B: Analisis de Hipotesis.
+
+```{r}
+# Realizando una descripcion estadistica de la columna Age
+describe(data$Age)
+summary(data$Age)
+
+# Realizando una descripcion estadistica de la columna CreditScore
+describe(data$CreditScore)
+summary(data$CreditScore)
+
+# Generando un grafico de Dispersion para las columnas Age y CreditScore
+p+geom_point(mapping = aes(Age,CreditScore))
+
+# LINEALIDAD
+# Revisando la correlacion entre las variables Age y CreditScore
+cor.test(data$Age,data$CreditScore)
+
+# Generando un grafico con la recta de la Regresion Lineal 
+lineal <-lm(data$CreditScore~data$Age)
+summary(lm(data$CreditScore~data$Age))
+p+geom_point(mapping = aes(Age,CreditScore))+geom_smooth(mapping=aes(Age,CreditScore),method = 'lm')
+
+# NORMALIDAD
+# Generando un grafico de histograma de los residuos y su densidad solapando la densidad normal
+g <- ggplot(lineal)
+g+geom_histogram(mapping = aes(lineal$residuals, y=..density..))+stat_function(fun = dnorm, args = list(mean=mean(lineal$residuals),sd = sd(lineal$residuals)))
+
+# Generando un grafico qqplot de los residuos para comprobar la distribucion normal
+qqnorm(lineal$residuals);qqline(lineal$residuals)
+
+# Realizando Tests adicionales de Normalidad
+ks.test(lineal$residuals,pnorm)
+LillieTest(lineal$residuals)
+
+# Revisando los estadisticos para verificar los resultados
+describe(lineal$residuals)
+
+# HOMOCEDASTICIDAD
+# Generando un grafico de dispersion de predicciones y residuos para confirmar la Homocedasticidad
+g+geom_point(mapping =aes(x=lineal$fitted.values,y=lineal$residuals))+geom_hline(aes(yintercept = 0),color = 'Red',size=1)+theme(plot.title=element_text(hjust = 0.5),panel.background = element_rect(fill="white"),axis.line.y=element_line(colour="black",size=0.2),
+        axis.line.x=element_line(colour="black",size=0.2))+labs(title = 'Comprobacion de Homocedasticidad',x='Pronostico',y='Residuos')
+
+# INDEPENDENCIA
+# Realizando un test de independencia de DurbinWatson
+DurbinWatsonTest(lineal)
+plot(lineal$fitted.values,lineal$residuals)
+
+```
+
+Como primera aproximación a las variables que vamos analizar, realizamos un descripción estadística básica de ellas para enter sus propiedades. Luego, realizamos un grafico de dispersion donde pudimos tener una aproximacion visual de como se comportaban los datos ente variables.
+
+Para poder entender si existía una correlación lineal entre las variables a analizar, hicimos un cor.test (Test de Pearson) para rechazar o no su H~0~ de que la correlación lineal o B1 sean igual a 0.
+
+Al realizar el test, obtuvimos un p-valor mayor a 0.05, lo que nos llevo a mantener la hipotesis nula, y por lo tanto concluir que no hay correlacion lineal estadisticamente significativa.
+
+Sin embargo, decidimos proceder con la estimacion de la regresion lineal para obtener un resultado visual de la recta. Visualmente arribamos a la misma conclusion ya que se observa un coeficiente B1 muy cercano a 0 y una recta practicamente horizontal, y ademas, con el R cuadrado vemos quela variable independiente (Edad/Age) solamente puede explicar el 0.0015% de la variable dependiente (CreditScore).
+
+Mas allá de que con los resultados anteriores podemos concluir que no hay casi relación entre las variables, decidimos testear todos los supuestos.
+
+La linealidad la testeamos anteriormente con el cor.test y vimos que no cumplia con ella. Continuamos con la normalidad de los residuos y a traves de los graficos y descriptivos estadisticos pudimos concluir que cumple con este supuesto. Posteriormente al testear la Homocedasticidad con un grafico de dispersion entre las predicciones y los residuos, se observo una dispersion sin tendencia y alrededor del cero, con lo que concluimos que cumple dicho supuesto. Por ultimo, se probo la Independencia a traves del DurbinWatson Test obteniendo un valor de 2.013 con lo que se puede concluir que cumple con el supuesto de independencia de los residuos.
+
+Respondiendo las preguntas:
+
+La H~0~ seria que la edad NO predice la solvencia económica (Credit Score). Esto se traduce en que la correlación lineal o B1 es igual a 0. Por otra parte, la H~1~ sería que la edad si predice (hasta cierto punto) la solvencia economica (CreditScore).
+Para testear dichas hipótesis, realizamos un análisis estadístico de regresión lineal, basándonos en los supuestos de linealidad, normalidad, homocedasticidad e independencia que dicha regresion requiere para ser aplicada.
+Como conclusion, a partir de los resultados obtenidos, podemos afirmar que no hay una relacion lineal entre la edad y la solvencia económica, y por lo tanto no es posible predecir una en funcion de la otra.
+
+```{r}
+data_france_Spain <- filter(data,data$Geography!='Germany')
+t.test(data_france_Spain$EstimatedSalary~data_france_Spain$Geography ,var.equal=T)
+
+data_france_Germany <- filter(data,data$Geography!='Spain')
+t.test(data_france_Germany$EstimatedSalary~data_france_Germany$Geography ,var.equal=T)
+
+data_germany_Spain <- filter(data,data$Geography!='France')
+t.test(data_germany_Spain$EstimatedSalary~data_germany_Spain$Geography ,var.equal=T)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
